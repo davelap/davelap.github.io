@@ -2,7 +2,21 @@
 		controllerName="ui5.MainMenu" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Title">
 		<content>
-	
+			<Button xmlns="sap.m"
+				id="id"
+				text="Press me!!"
+				type="Default"
+				width=""
+				enabled="true"
+				visible="true"
+				icon=""
+				iconFirst="true"
+				activeIcon=""
+				iconDensityAware="true"
+				tap=""
+				press="">
+			</Button>
+
 		</content>
 	</Page>
 </core:View>
