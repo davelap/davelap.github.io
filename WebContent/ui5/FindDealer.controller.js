@@ -35,7 +35,7 @@ sap.ui.controller("ui5.FindDealer", {
             this.map = new google.maps.Map(this.getView().byId("map_canvas").getDomRef(),
                 mapOptions);
         }
-	}
+	},
 
 /**
 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
@@ -44,5 +44,19 @@ sap.ui.controller("ui5.FindDealer", {
 //	onExit: function() {
 //
 //	}
-
+    actSearch: function () {
+        var map = this.map;
+        var address = this.getView().byId("inpSearch").getValue();
+        this.geocoder.geocode({ 'address': address }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                map.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: results[0].geometry.location
+                });
+            } else {
+                alert('Geocode was not successful for the following reason: ' + status);
+            }
+        });
+    }
 });
