@@ -13,8 +13,7 @@
         <content>
             <TileContainer  xmlns="sap.m" id="container" tileDelete="handleTileDelete" width="100%" height="100%">
                 <StandardTile xmlns="sap.m" icon="sap-icon://car-rental" type="None" title="Car Listing" info="List of cars" press="OpenCarList" />
-                <StandardTile xmlns="sap.m" icon="sap-icon://temperature" type="None"
-                    number="23°" numberUnit="Celcius" title="Walldorf" info="Cloudy" />
+                <StandardTile xmlns="sap.m" icon="sap-icon://car-rental" type="None" title="Find Dealer" info="List of cars" press="OpenFindDealer" />
                 <StandardTile xmlns="sap.m" icon="sap-icon://temperature" type="None"
                     number="23°" numberUnit="Celcius" title="Walldorf" info="Cloudy" />
             </TileContainer>

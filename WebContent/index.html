@@ -17,12 +17,21 @@
 				var page = sap.ui.view({id:"idMainMenu1", viewName:"ui5.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
 				var page2 = sap.ui.view({id:"idPage21", viewName:"ui5.Page2", type:sap.ui.core.mvc.ViewType.XML});
 				var pageCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.CarList", type:sap.ui.core.mvc.ViewType.XML});
+				var pageFindDeader = sap.ui.view({id:"idPageFindDealer", viewName:"ui5.FindDealer", type:sap.ui.core.mvc.ViewType.XML});
 				app.addPage(page);
 				app.addPage(page2);
 				app.addPage(pageCarList);
+				app.addPage(pageFindDeader);
 				app.placeAt("content");
 		</script>
-
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCScIp2l2eavl0lSMxzhnF-iYFQAgYf1Hg&sensor=false"
+                type ="text/javascript"></script>
+        <style>
+            .myMap {
+                height: 100%;
+                width: 100%
+            }
+        </style>
 	</head>
 	<body class="sapUiBody" role="application">
 		<div id="content"></div>
