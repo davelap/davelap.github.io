@@ -1,6 +1,23 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script id='sap-ui-bootstrap'
+		src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'
+		data-sap-ui-theme='sap_bluecrystal'
+		data-sap-ui-libs='sap.ui.commons'>
+		</script> 
+
+		<script>
+				sap.ui.localResources("ui5");
+				var app = new sap.m.App({initialPage:"idMainMenu1"});
+				var page = sap.ui.view({id:"idMainMenu1", viewName:"ui5.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page);
+				app.placeAt("content");
+		</script>
+
 	</head>
 	<body class="sapUiBody" role="application">
 		Hello
