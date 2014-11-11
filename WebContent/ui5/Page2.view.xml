@@ -1,10 +1,10 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-		controllerName="ui5.MainMenu" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="Page 1">
+		controllerName="ui5.Page2" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Page 2">
 		<content>
 			<Button xmlns="sap.m"
-				id="id"
-				text="Go to Page 2"
+				id="idBack"
+				text="Back"
 				type="Default"
 				width=""
 				enabled="true"
@@ -14,9 +14,8 @@
 				activeIcon=""
 				iconDensityAware="true"
 				tap=""
-				press="GoToPage2">
+				press="Back">
 			</Button>
-
 		</content>
 	</Page>
 </core:View>
