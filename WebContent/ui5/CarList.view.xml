@@ -1,0 +1,56 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="ui5.CarList" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Car List">
+		<content>
+			<Carousel xmlns="sap.m"
+				id="idCarListCarousel"
+				height="100%"
+				width="100%"
+				loop="false"
+				visible="true"
+				showPageIndicator="true"
+				pageIndicatorPlacement="Bottom"
+				showBusyIndicator="true"
+				busyIndicatorSize="6em"
+				activePage=""
+				loadPage=""
+				unloadPage=""
+				pageChanged="">
+					<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+					<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+					<pages>
+					<Image xmlns="sap.m"
+						id="idCar1"
+						src="http://image.mustangandfords.com/f/33283956/mump-1006-01-o%2B1967-ford-mustang-fastback%2Bfront-view.jpg"
+						visible="true"
+						width="300px"
+						height="300px"
+						decorative="true"
+						alt=""
+						useMap=""
+						densityAware="true"
+						activeSrc=""
+						tap=""
+						press="">
+					</Image>
+					<Image xmlns="sap.m"
+						id="idCar2"
+						src="http://www.alternativecars.fr/img/vehicles/600x450/3_151.jpg"
+						visible="true"
+						width="300px"
+						height="300px"
+						decorative="true"
+						alt=""
+						useMap=""
+						densityAware="true"
+						activeSrc=""
+						tap=""
+						press="">
+					</Image>
+					</pages> <!-- sap.ui.core.Control -->
+					
+			</Carousel>
+
+		</content>
+	</Page>
+</core:View>

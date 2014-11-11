@@ -12,11 +12,14 @@
 
 		<script>
 				sap.ui.localResources("ui5");
+				
 				var app = new sap.m.App({initialPage:"idMainMenu1"});
 				var page = sap.ui.view({id:"idMainMenu1", viewName:"ui5.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
 				var page2 = sap.ui.view({id:"idPage21", viewName:"ui5.Page2", type:sap.ui.core.mvc.ViewType.XML});
+				var pageCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.CarList", type:sap.ui.core.mvc.ViewType.XML});
 				app.addPage(page);
 				app.addPage(page2);
+				app.addPage(pageCarList);
 				app.placeAt("content");
 		</script>
 
