@@ -34,5 +34,7 @@ sap.ui.controller("ui5.CarList", {
 //	onExit: function() {
 //
 //	}
-
+	BackMainMenu: function() {
+		app.to("idMainMenu");
+	}
 });

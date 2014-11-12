@@ -16,12 +16,10 @@
 				
 				var app = new sap.m.App({initialPage:"idMainMenu"});
 				var pageMainMenu = sap.ui.view({id:"idMainMenu", viewName:"ui5.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
-				var page2 = sap.ui.view({id:"idPage21", viewName:"ui5.Page2", type:sap.ui.core.mvc.ViewType.XML});
 				var pageCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.CarList", type:sap.ui.core.mvc.ViewType.XML});
 				var pageCarDetail = sap.ui.view({id:"idPageCarDetail", viewName:"ui5.CarDetail", type:sap.ui.core.mvc.ViewType.XML});
 				var pageFindDeader = sap.ui.view({id:"idPageFindDealer", viewName:"ui5.FindDealer", type:sap.ui.core.mvc.ViewType.XML});
 				app.addPage(pageMainMenu);
-				app.addPage(page2);
 				app.addPage(pageCarList);
 				app.addPage(pageFindDeader);
 				app.addPage(pageCarDetail);
