@@ -10,7 +10,7 @@
 	     	<Button xmlns="sap.m" type="Back" press="BackMainMenu"/>
         </headerContent>
 		<content>
- 			<f:SimpleForm id="carDetailSF" maxContainerCols="2" columnsL="2" columnsM="1">
+ 			<f:SimpleForm id="carDetailSF" maxContainerCols="3">
  				<f:content>
  				
  					<Label text="Maker" />
