@@ -44,6 +44,10 @@ sap.ui.controller("ui5.MainMenu", {
 		app.to("idPageCarList");
 	},
 	
+	OpenCarDetail: function() {
+		app.to("idPageCarDetail");
+	},
+	
 	OpenFindDealer: function() {
 		app.to("idPageFindDealer");
 	}

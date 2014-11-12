@@ -5,44 +5,30 @@
 		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
 
 		<script id='sap-ui-bootstrap'
-		src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'
+		src='resources/sap-ui-core.js'
 		data-sap-ui-theme='sap_bluecrystal'
-		data-sap-ui-libs='sap.m,sap.makit'>
+		data-sap-ui-libs='sap.m'
+		data-sap-ui-xx-bindingSyntax="complex">
 		</script> 
 
 		<script>
 				sap.ui.localResources("ui5");
 				
-				var app = new sap.m.App({initialPage:"idMainMenu1"});
-				var page = sap.ui.view({id:"idMainMenu1", viewName:"ui5.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
+				var app = new sap.m.App({initialPage:"idMainMenu"});
+				var pageMainMenu = sap.ui.view({id:"idMainMenu", viewName:"ui5.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
 				var page2 = sap.ui.view({id:"idPage21", viewName:"ui5.Page2", type:sap.ui.core.mvc.ViewType.XML});
 				var pageCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.CarList", type:sap.ui.core.mvc.ViewType.XML});
+				var pageCarDetail = sap.ui.view({id:"idPageCarDetail", viewName:"ui5.CarDetail", type:sap.ui.core.mvc.ViewType.XML});
 				var pageFindDeader = sap.ui.view({id:"idPageFindDealer", viewName:"ui5.FindDealer", type:sap.ui.core.mvc.ViewType.XML});
-				app.addPage(page);
+				app.addPage(pageMainMenu);
 				app.addPage(page2);
 				app.addPage(pageCarList);
 				app.addPage(pageFindDeader);
+				app.addPage(pageCarDetail);
 				app.placeAt("content");
 		</script>
-	<style type="text/css"> html, body, #map-canvas { height: 20%; margin: 0; padding: 0;}
-    </style>
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCScIp2l2eavl0lSMxzhnF-iYFQAgYf1Hg">
-    </script>
-    <script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: { lat: -34.397, lng: 150.644},
-          zoom: 8
-        };
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
 	</head>
 	<body class="sapUiBody" role="application">
 		<div id="content"></div>
-		<div id="map-canvas"></div>
 	</body>
 </html>
