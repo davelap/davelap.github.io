@@ -7,11 +7,25 @@ sap.ui.controller("ui5.CarDetail", {
 */
 	onInit: function() {
 		var oData = {
-									maker: "Ford",
-									model: "Mustang",
-									year: "1967"
+						maker: "Ford",
+						model: "Mustang",
+						year: "1967"
 					};
 		
+		var oModel2 = new sap.ui.model.json.JSONModel();
+		//alert(oModel2.getJSON());
+		//oModel2.loadData("model/Maker.json");
+		
+//		$.ajax({
+//		            type: 'GET',
+//		            url : "model/Maker.json",
+//		            dataType: 'json',
+//		            success: function(data,textStatus,jqXHR) {
+//		},
+//		error : function(jqXHR,textStatus,errorThrown) {
+//			alert("KO");
+//		}});
+
 		var oDataMakers = {
 							"makers": 
 								[
@@ -46,9 +60,10 @@ sap.ui.controller("ui5.CarDetail", {
 * (NOT before the first rendering! onInit() is used for that one!).
 * @memberOf ui5.CarDetail
 */
-//	onBeforeRendering: function() {
-//
-//	},
+	onBeforeRendering: function() {
+
+	},
+	
 
 /**
 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.

@@ -5,10 +5,10 @@
 		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
 
 		<script id='sap-ui-bootstrap'
-		src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'
-		data-sap-ui-theme='sap_bluecrystal'
-		data-sap-ui-libs='sap.m'
-		data-sap-ui-xx-bindingSyntax="complex">
+			src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'
+			data-sap-ui-theme='sap_bluecrystal'
+			data-sap-ui-libs='sap.m'
+			data-sap-ui-xx-bindingSyntax="complex">
 		</script> 
 
 		<script>
@@ -16,7 +16,7 @@
 				
 				var app = new sap.m.App({initialPage:"idMainMenu"});
 				var pageMainMenu = sap.ui.view({id:"idMainMenu", viewName:"ui5.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
-				var pageCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.CarList", type:sap.ui.core.mvc.ViewType.XML});
+				var pageCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
 				var pageCarDetail = sap.ui.view({id:"idPageCarDetail", viewName:"ui5.CarDetail", type:sap.ui.core.mvc.ViewType.XML});
 				var pageFindDeader = sap.ui.view({id:"idPageFindDealer", viewName:"ui5.FindDealer", type:sap.ui.core.mvc.ViewType.XML});
 				app.addPage(pageMainMenu);
