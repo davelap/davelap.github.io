@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script id='sap-ui-bootstrap'
+			src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'
+			data-sap-ui-theme='sap_bluecrystal'
+			data-sap-ui-libs='sap.m,sap.ui.commons'
+			data-sap-ui-xx-bindingSyntax="complex">
+		</script> 
+
+		<script>
+				sap.ui.localResources("ui5");
+				
+				var app = new sap.m.App({initialPage:"idMainMenu"});
+				var pageMainMenu = sap.ui.view({id:"idMainMenu", viewName:"ui5.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
+				var pageCarListCarousel = sap.ui.view({id:"idPageCarListCarousel", viewName:"ui5.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
+				var pageCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.CarList", type:sap.ui.core.mvc.ViewType.XML});
+				var pageCarDetail = sap.ui.view({id:"idPageCarDetail", viewName:"ui5.CarDetail", type:sap.ui.core.mvc.ViewType.XML});
+				var pageFindDeader = sap.ui.view({id:"idPageFindDealer", viewName:"ui5.FindDealer", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(pageMainMenu);
+				app.addPage(pageCarList);
+				app.addPage(pageCarListCarousel);
+				app.addPage(pageFindDeader);
+				app.addPage(pageCarDetail);
+				app.placeAt("content");
+		</script>
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

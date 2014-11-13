@@ -24,16 +24,16 @@
 				</items>
 				<columns>
 					<Column xmlns="sap.m">
-						<header><Label text="Maker"/></header>
+						<header><Label xmlns="sap.m" text="Maker"/></header>
 					</Column>
 					<Column xmlns="sap.m">
-						<header><Label text="Model"/></header>
+						<header><Label xmlns="sap.m" text="Model"/></header>
 					</Column>
 					<Column xmlns="sap.m">
-						<header><Label text="Year"/></header>
+						<header><Label xmlns="sap.m" text="Year"/></header>
 					</Column>
 					<Column xmlns="sap.m">
-						<header><Label text="Rating"/></header>
+						<header><Label xmlns="sap.m" text="Rating"/></header>
 					</Column>
 				</columns>
 			</Table>
