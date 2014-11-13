@@ -1,4 +1,7 @@
-<core:View xmlns:core="sap.ui.core" 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<core:View  xmlns:core="sap.ui.core" 
 			xmlns:mvc="sap.ui.core.mvc" 
 			xmlns="sap.m"
 			xmlns:f="sap.ui.layout.form"

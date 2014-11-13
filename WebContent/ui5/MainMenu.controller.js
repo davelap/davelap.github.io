@@ -35,11 +35,6 @@ sap.ui.controller("ui5.MainMenu", {
 //
 //	}
 	
-	// implement an event handler in the Controller
-	GoToPage2: function() {
-		app.to("idPage21");
-	},
-
 	OpenCarList: function() {
 		app.to("idPageCarList");
 	},
@@ -47,6 +42,11 @@ sap.ui.controller("ui5.MainMenu", {
 	OpenCarDetail: function() {
 		app.to("idPageCarDetail");
 	},
+	
+	OpenCarListCarousel: function() {
+		app.to("idPageCarListCarousel");
+	},
+	
 	
 	OpenFindDealer: function() {
 		app.to("idPageFindDealer");

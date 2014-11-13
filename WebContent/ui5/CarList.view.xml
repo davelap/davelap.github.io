@@ -1,32 +1,42 @@
-<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-		controllerName="ui5.CarList" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="Car List">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<mvc:View 	xmlns:core="sap.ui.core" 
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns="sap.m"
+			controllerName="ui5.CarList" 
+			xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page xmlns="sap.m" title="Car Listing">
 		<headerContent>
-	     	<Button xmlns="sap.m" type="Back" press="BackMainMenu"/>
+	     	<Button type="Back" press="BackMainMenu"/>
         </headerContent>
 		<content>
-			<Carousel xmlns="sap.m"
-				height="100%"
-				width="100%"
-				loop="false"
-				visible="true">
-					<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
-					<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
-					<pages>
-						<Image xmlns="sap.m"
-							src="http://www.mustangspecs.com/carpics/67fastback.jpg"
-							visible="true"
-							width="300px"
-							height="300px">
-						</Image>
-						<Image xmlns="sap.m"
-							src="http://www.alternativecars.fr/img/vehicles/600x450/3_151.jpg"
-							visible="true"
-							width="300px"
-							height="300px">
-						</Image>
-					</pages> <!-- sap.ui.core.Control -->
-			</Carousel>
+
+			<Table xmlns="sap.m" title="Car Listing22" items="{/cars/cars}" visiblerowcount="7" selectionMode="Multi" selectionBehavior="RowSelector">
+				<items> <!-- sap.m.ListItemBase -->
+		          <ColumnListItem>
+		            <cells>
+		              <Label xmlns="sap.m" text="{maker}" />
+		              <Label xmlns="sap.m" text="{model}" />
+		              <Label xmlns="sap.m" text="{year}" />
+		              <RatingIndicator xmlns="sap.m" value="{rating}" enabled="false"/>
+		            </cells>
+		          </ColumnListItem>
+				</items>
+				<columns>
+					<Column xmlns="sap.m">
+						<header><Label text="Maker"/></header>
+					</Column>
+					<Column xmlns="sap.m">
+						<header><Label text="Model"/></header>
+					</Column>
+					<Column xmlns="sap.m">
+						<header><Label text="Year"/></header>
+					</Column>
+					<Column xmlns="sap.m">
+						<header><Label text="Rating"/></header>
+					</Column>
+				</columns>
+			</Table>
 		</content>
 	</Page>
-</core:View>
+</mvc:View>

@@ -5,9 +5,22 @@ sap.ui.controller("ui5.CarList", {
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf ui5.CarList
 */
-//	onInit: function() {
-//
-//	},
+	onInit: function() {
+		
+		var oModel = new sap.ui.model.json.JSONModel();
+		
+		var oDataCarListing = {
+				cars: 
+					[
+					  {maker: "Ford",  model:"Mustang",year:1967, rating: 5 },
+					  {maker: "Ford",  model:"Mustang",year:1968, rating: 4 },
+					  {maker: "Dodge", model:"Viper",  year:2000, rating: 3 }
+					]
+			  };
+		
+		oModel.setData({cars : oDataCarListing});
+		this.getView().setModel(oModel);
+	},
 
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
