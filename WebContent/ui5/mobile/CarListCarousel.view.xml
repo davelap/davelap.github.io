@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<core:View xmlns:core="sap.ui.core" 
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns="sap.m"
+			controllerName="ui5.mobile.CarListCarousel" 
+			xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Car List">
+		<headerContent>
+	     	<Button xmlns="sap.m" type="Back" press="BackMainMenu"/>
+        </headerContent>
+		<content>
+			<Carousel xmlns="sap.m" height="100%" width="100%" loop="true">
+					<pages>
+						<Image xmlns="sap.m"
+							src="http://www.mustangspecs.com/carpics/67fastback.jpg"
+							width="300px" height="300px">
+						</Image>
+						<Image xmlns="sap.m"
+							src="http://www.alternativecars.fr/img/vehicles/600x450/3_151.jpg"
+							width="300px" height="300px">
+						</Image>
+					</pages> <!-- sap.ui.core.Control -->
+			</Carousel>
+		</content>
+	</Page>
+</core:View>

@@ -7,7 +7,7 @@
 		<script id='sap-ui-bootstrap'
 			src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'
 			data-sap-ui-theme='sap_bluecrystal'
-			data-sap-ui-libs='sap.m,sap.ui.commons'
+			data-sap-ui-libs='sap.m,sap.ui.commons,sap.ui.table'
 			data-sap-ui-xx-bindingSyntax="complex">
 		</script> 
 
@@ -15,13 +15,15 @@
 				sap.ui.localResources("ui5");
 				
 				var app = new sap.m.App({initialPage:"idMainMenu"});
-				var pageMainMenu = sap.ui.view({id:"idMainMenu", viewName:"ui5.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
-				var pageCarListCarousel = sap.ui.view({id:"idPageCarListCarousel", viewName:"ui5.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
-				var pageCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.CarList", type:sap.ui.core.mvc.ViewType.XML});
-				var pageCarDetail = sap.ui.view({id:"idPageCarDetail", viewName:"ui5.CarDetail", type:sap.ui.core.mvc.ViewType.XML});
-				var pageFindDeader = sap.ui.view({id:"idPageFindDealer", viewName:"ui5.FindDealer", type:sap.ui.core.mvc.ViewType.XML});
+				var pageMainMenu = sap.ui.view({id:"idMainMenu", viewName:"ui5.mobile.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
+				var pageCarListCarousel = sap.ui.view({id:"idPageCarListCarousel", viewName:"ui5.mobile.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
+				var pageCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.mobile.CarList", type:sap.ui.core.mvc.ViewType.XML});
+				var pageDesktopCarList = sap.ui.view({id:"idPageCarDesktopList", viewName:"ui5.desktop.CarList", type:sap.ui.core.mvc.ViewType.XML});
+				var pageCarDetail = sap.ui.view({id:"idPageCarDetail", viewName:"ui5.mobile.CarDetail", type:sap.ui.core.mvc.ViewType.XML});
+				var pageFindDeader = sap.ui.view({id:"idPageFindDealer", viewName:"ui5.mobile.FindDealer", type:sap.ui.core.mvc.ViewType.XML});
 				app.addPage(pageMainMenu);
 				app.addPage(pageCarList);
+				app.addPage(pageDesktopCarList);
 				app.addPage(pageCarListCarousel);
 				app.addPage(pageFindDeader);
 				app.addPage(pageCarDetail);

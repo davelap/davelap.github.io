@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<core:View xmlns:core="sap.ui.core" 
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns="sap.ui.commons"
+			controllerName="ui5.desktop.MainMenu" xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<TileContainer xmlns="sap.ushell"
+		id="id"
+		scrollType="item"
+		animationSpeed="500"
+		groupId=""
+		showHeader="true"
+		showPlaceholder="true"
+		defaultGroup="false"
+		headerText=""
+		headerLevel="H2"
+		groupHeaderLevel="H4"
+		showGroupHeader="true"
+		visible="true"
+		sortable="true"
+		showNoData="false"
+		noDataText=""
+		afterRendering=""
+		add="">
+			<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+			<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+			<tiles> <!-- sap.ushell.ui.launchpad.Tile -->
+				<Tile xmlns="sap.ushell"
+					id="id1"
+					tall="false"
+					long="false"
+					uuid=""
+					target=""
+					draggable="false"
+					dragContainer=""
+					visible="true"
+					debugInfo=""
+					rgba=""
+					animationRendered="false"
+					press=""
+					dragStart=""
+					dragStop=""
+					afterRendering="">
+						<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+						<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+						<tileViews></tileViews> <!-- sap.ui.core.Control -->
+						<footItems></footItems> <!-- sap.ui.core.Control -->
+				</Tile>
+			</tiles>
+			<footerContent></footerContent> <!-- sap.ui.core.Control -->
+	</TileContainer>
+</core:View>
