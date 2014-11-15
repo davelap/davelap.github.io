@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<mvc:View controllerName="ui5.Shell" 
+		  xmlns:l="sap.ui.layout"
+		  xmlns:u="sap.ui.unified"
+		  xmlns:mvc="sap.ui.core.mvc"
+		  xmlns="sap.m"
+		  class="viewPadding">
+  <u:Shell xmlns="sap.ui.unified"
+		id="myShell"
+		icon="http://www.mane.com/sites/all/themes/tao/shinto/mane/images/logo.png"
+		showPane="false">
+			<content>
+			
+			</content> <!-- sap.ui.core.Control -->
+			<paneContent></paneContent> <!-- sap.ui.core.Control -->
+			<curtainContent></curtainContent> <!-- sap.ui.core.Control -->
+			<curtainPaneContent></curtainPaneContent> <!-- sap.ui.core.Control -->
+			<headItems> <!-- sap.ui.unified.ShellHeadItem -->
+				<ShellHeadItem xmlns="sap.ui.unified"
+					icon="sap-icon://menu2"
+					press="handlePressPane"
+					tooltip="Menu">
+				</ShellHeadItem>
+			</headItems>
+			<headEndItems>
+				<ShellHeadItem xmlns="sap.ui.unified"
+					icon="sap-icon://home"
+					press="handlePressHome"
+					tooltip="Home">
+				</ShellHeadItem>
+				<ShellHeadItem xmlns="sap.ui.unified"
+					icon="sap-icon://log"
+					press=""
+					tooltip="Logoff">
+				</ShellHeadItem>
+			</headEndItems> <!-- sap.ui.unified.ShellHeadItem -->
+			<search></search> <!-- sap.ui.core.Control -->
+			<user></user> <!-- sap.ui.unified.ShellHeadUserItem, since 1.22.0 -->
+	</u:Shell>
+</mvc:View>

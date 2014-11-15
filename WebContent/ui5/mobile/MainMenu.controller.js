@@ -51,7 +51,6 @@ sap.ui.controller("ui5.mobile.MainMenu", {
 		app.to("idPageCarDesktopList");
 	},
 	
-	
 	OpenFindDealer: function() {
 		app.to("idPageFindDealer");
 	}

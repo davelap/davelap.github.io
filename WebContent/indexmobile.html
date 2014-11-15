@@ -12,25 +12,66 @@
 		</script> 
 
 		<script>
-				sap.ui.localResources("ui5");
-				
-				var app = new sap.m.App({initialPage:"idMainMenu"});
-				var pageMainMenu = sap.ui.view({id:"idMainMenu", viewName:"ui5.mobile.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
-				var pageCarListCarousel = sap.ui.view({id:"idPageCarListCarousel", viewName:"ui5.mobile.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
-				var pageCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.mobile.CarList", type:sap.ui.core.mvc.ViewType.XML});
-				var pageDesktopCarList = sap.ui.view({id:"idPageCarDesktopList", viewName:"ui5.desktop.CarList", type:sap.ui.core.mvc.ViewType.XML});
-				var pageCarDetail = sap.ui.view({id:"idPageCarDetail", viewName:"ui5.mobile.CarDetail", type:sap.ui.core.mvc.ViewType.XML});
-				var pageFindDeader = sap.ui.view({id:"idPageFindDealer", viewName:"ui5.mobile.FindDealer", type:sap.ui.core.mvc.ViewType.XML});
-				app.addPage(pageMainMenu);
-				app.addPage(pageCarList);
-				app.addPage(pageDesktopCarList);
-				app.addPage(pageCarListCarousel);
-				app.addPage(pageFindDeader);
-				app.addPage(pageCarDetail);
-				app.placeAt("content");
+			sap.ui.localResources("ui5");
+			
+// 			//Create mobile application
+// 			var app = new sap.m.App({initialPage:"idMainMenu"});
+			
+// 			//Create views
+// 			var pageMainMenu = sap.ui.view({id:"idMainMenu", viewName:"ui5.mobile.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
+// 			var pageCarListCarousel = sap.ui.view({id:"idPageCarListCarousel", viewName:"ui5.mobile.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
+// 			var pageCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.mobile.CarList", type:sap.ui.core.mvc.ViewType.XML});
+// 			var pageDesktopCarList = sap.ui.view({id:"idPageCarDesktopList", viewName:"ui5.desktop.CarList", type:sap.ui.core.mvc.ViewType.XML});
+// 			var pageCarDetail = sap.ui.view({id:"idPageCarDetail", viewName:"ui5.mobile.CarDetail", type:sap.ui.core.mvc.ViewType.XML});
+// 			var pageFindDeader = sap.ui.view({id:"idPageFindDealer", viewName:"ui5.mobile.FindDealer", type:sap.ui.core.mvc.ViewType.XML});
+ 			var myShell = sap.ui.view({id:"idShell", viewName:"ui5.Shell", type:sap.ui.core.mvc.ViewType.XML});
+			
+// 			//Add pages to application
+// 			app.addPage(pageMainMenu);
+// 			app.addPage(pageCarList);
+// 			app.addPage(pageDesktopCarList);
+// 			app.addPage(pageCarListCarousel);
+// 			app.addPage(pageFindDeader);
+// 			app.addPage(pageCarDetail);
+
+			
+// 			//Create shell object
+
+// 			var oShell = new sap.ui.unified.Shell("myShell", {
+// 				icon:"http://www.mane.com/sites/all/themes/tao/shinto/mane/images/logo.png",
+// 				showPane:true,
+// 				showCurtain:false,
+// 				showCurtainPane:false,
+// 				headerVisible:true,
+// 				searchVisible:true
+// 			});
+			
+			
+// 			var oMenu = new sap.ui.unified.ShellHeadItem({
+// 			    tooltip: "Show Menu",
+// 			    icon: "sap-icon://menu2"
+// 			});
+			
+// 			var oHome = new sap.ui.unified.ShellHeadItem({
+// 			    tooltip: "Home",
+// 			    icon: "sap-icon://home"
+// 			});
+			
+// 			var oLogout = new sap.ui.unified.ShellHeadItem({
+// 			    tooltip: "LogOut",
+// 			    icon: "sap-icon://log"
+// 			});
+			
+			//Create sheel Header and content
+			//oShell.addHeadItem(oMenu);
+			//oShell.addHeadEndItem(oHome);
+			//oShell.addHeadEndItem(oLogout);
+			//oShell.addContent(pageMainMenu);
+			
+			//Place shell
+			myShell.placeAt('body');
 		</script>
 	</head>
-	<body class="sapUiBody" role="application">
-		<div id="content"></div>
+	<body class="sapUiBody" id="body" role="application">
 	</body>
 </html>
