@@ -27,15 +27,18 @@
 				<ShellHeadItem xmlns="sap.ui.unified"
 					icon="sap-icon://home"
 					press="handlePressHome"
-					tooltip="Home">
-				</ShellHeadItem>
+					tooltip="Home"/>
 				<ShellHeadItem xmlns="sap.ui.unified"
 					icon="sap-icon://log"
 					press=""
-					tooltip="Logoff">
-				</ShellHeadItem>
+					tooltip="Logoff"/>
 			</headEndItems> <!-- sap.ui.unified.ShellHeadItem -->
 			<search></search> <!-- sap.ui.core.Control -->
-			<user></user> <!-- sap.ui.unified.ShellHeadUserItem, since 1.22.0 -->
+			<user>
+				<u:ShellHeadUserItem
+		          image="sap-icon://person-placeholder"
+		          username="Sandra Foucault"
+		          press="handleUserItemPressed" />
+			</user> <!-- sap.ui.unified.ShellHeadUserItem, since 1.22.0 -->
 	</u:Shell>
 </mvc:View>
