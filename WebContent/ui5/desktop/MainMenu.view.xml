@@ -19,10 +19,6 @@
                 		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
                 		<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
                 		<content>
-                		    <m:StandardTile title="Test">
-                            		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
-                            		<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
-                            </m:StandardTile>
                             <InfoTile xmlns="sap.suite.ui.commons"
 								description="sasa"
 								title=""
