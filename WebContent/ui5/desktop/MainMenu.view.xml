@@ -1,53 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
-<core:View xmlns:core="sap.ui.core" 
+<mvc:View xmlns:core="sap.ui.core" 
 			xmlns:mvc="sap.ui.core.mvc" 
 			xmlns="sap.ui.commons"
-			controllerName="ui5.desktop.MainMenu" xmlns:html="http://www.w3.org/1999/xhtml">
-
-	<TileContainer xmlns="sap.ushell"
-		id="id"
-		scrollType="item"
-		animationSpeed="500"
-		groupId=""
-		showHeader="true"
-		showPlaceholder="true"
-		defaultGroup="false"
-		headerText=""
-		headerLevel="H2"
-		groupHeaderLevel="H4"
-		showGroupHeader="true"
-		visible="true"
-		sortable="true"
-		showNoData="false"
-		noDataText=""
-		afterRendering=""
-		add="">
+			xmlns:m="sap.m"
+			xmlns:us="sap.ushell.ui.launchpad"
+			controllerName="ui5.desktop.MainMenu"
+			xmlns:html="http://www.w3.org/1999/xhtml">
+			
+	<TileContainer xmlns="sap.m" width="100%" height="100%"
+		editable=""
+		allowAdd=""
+		tileMove=""
+		tileDelete=""
+		tileAdd="">
 			<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
 			<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
-			<tiles> <!-- sap.ushell.ui.launchpad.Tile -->
-				<Tile xmlns="sap.ushell"
-					id="id1"
-					tall="false"
-					long="false"
-					uuid=""
-					target=""
-					draggable="false"
-					dragContainer=""
-					visible="true"
-					debugInfo=""
-					rgba=""
-					animationRendered="false"
-					press=""
-					dragStart=""
-					dragStop=""
-					afterRendering="">
+			<tiles>
+				<CustomTile xmlns="sap.m" removable="true" press="">
 						<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
 						<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
-						<tileViews></tileViews> <!-- sap.ui.core.Control -->
-						<footItems></footItems> <!-- sap.ui.core.Control -->
-				</Tile>
-			</tiles>
-			<footerContent></footerContent> <!-- sap.ui.core.Control -->
+						<content>
+							<InfoTile xmlns="sap.suite.ui.commons"
+								description="sasa"
+								title=""
+								footer=""
+								size="Auto"
+								state="Loading"
+								press="">
+									<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+									<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+									<content></content> <!-- sap.ui.core.Control -->
+							</InfoTile>
+
+						</content> <!-- sap.ui.core.Control -->
+				</CustomTile>
+			</tiles> <!-- sap.ui.core.Control -->
 	</TileContainer>
-</core:View>
+
+
+
+
+			
+<!-- 	<m:TileContainer id="container" tileDelete="handleTileDelete" width="100%" height="100%"> -->
+<!-- 		<m:tiles> -->
+<!-- 		    <m:StandardTile icon="sap-icon://sales-order" 	type="None" title="Sales Order" 			info="Desktop" 					press="OpenSalesOrder" /> -->
+<!-- 			<m:StandardTile icon="sap-icon://list" 			type="None" title="Car Listing" 			info="List of cars" 			press="OpenCarList" /> -->
+<!-- 			<m:StandardTile icon="sap-icon://list" 			type="None" title="Car Listing" 			info="Desktop - List of cars" 	press="OpenDesktopCarList" /> -->
+<!-- 	    	<m:StandardTile icon="sap-icon://insurance-car" type="None" title="Car Listing Carousel" 	info="Car Carousel" 			press="OpenCarListCarousel" /> -->
+<!-- 	    	<m:StandardTile icon="sap-icon://insurance-car" type="None" title="Car Listing Carousel" 	info="Desktop - Car Carousel" 	press="OpenDesktopCarListCarousel" /> -->
+<!-- 	    	<m:StandardTile icon="sap-icon://retail-store" 	type="None" title="Find Dealer" 			info="Find Dealer" 				press="OpenFindDealer" /> -->
+<!-- 	    	<m:StandardTile icon="sap-icon://car-rental" 	type="None" title="Get Car Detail" 			info="Car Detail" 				press="OpenCarDetail" /> -->
+<!-- 		</m:tiles> -->
+<!-- 	</m:TileContainer> -->
+</mvc:View>

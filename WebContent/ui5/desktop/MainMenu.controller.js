@@ -5,9 +5,10 @@ sap.ui.controller("ui5.desktop.MainMenu", {
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf ui5.MainMenu
 */
-//	onInit: function() {
-//
-//	},
+	onInit: function() {
+		var button = new sap.ui.commons.Button("testtest", {text:"AAAA"});
+		//this.getView().addContent(button);
+	},
 
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
@@ -46,7 +47,6 @@ sap.ui.controller("ui5.desktop.MainMenu", {
 	OpenCarListCarousel: function() {
 		app.to("idPageCarListCarousel");
 	},
-	
 	
 	OpenFindDealer: function() {
 		app.to("idPageFindDealer");

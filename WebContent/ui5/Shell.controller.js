@@ -6,21 +6,29 @@ sap.ui.controller("ui5.Shell", {
 * @memberOf ui5.Shell
 */
 	onInit: function() {
-		//Create mobile application
-		var app = new sap.m.App({initialPage:"idMainMenu"});
 		
-		//Create views
+		//Create desktop views
+		var viewDesktopMainMenu 		= sap.ui.view({id:"idDesktopMainMenu", viewName:"ui5.desktop.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
+		var viewDesktopCarList 			= sap.ui.view({id:"idPageCarDesktopList", viewName:"ui5.desktop.CarList", type:sap.ui.core.mvc.ViewType.XML});
+		var viewDesktopCarListCarousel 	= sap.ui.view({id:"idPageCarListDesktopCarousel", viewName:"ui5.desktop.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
+		var viewSalesOrder 				= sap.ui.view({id:"idViewSalesOrder", viewName:"ui5.desktop.SalesOrder", type:sap.ui.core.mvc.ViewType.XML});	
+		
+		//Create mobile views
 		var pageMainMenu = sap.ui.view({id:"idMainMenu", viewName:"ui5.mobile.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
 		var pageCarListCarousel = sap.ui.view({id:"idPageCarListCarousel", viewName:"ui5.mobile.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
 		var pageCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.mobile.CarList", type:sap.ui.core.mvc.ViewType.XML});
-		var pageDesktopCarList = sap.ui.view({id:"idPageCarDesktopList", viewName:"ui5.desktop.CarList", type:sap.ui.core.mvc.ViewType.XML});
 		var pageCarDetail = sap.ui.view({id:"idPageCarDetail", viewName:"ui5.mobile.CarDetail", type:sap.ui.core.mvc.ViewType.XML});
 		var pageFindDeader = sap.ui.view({id:"idPageFindDealer", viewName:"ui5.mobile.FindDealer", type:sap.ui.core.mvc.ViewType.XML});
 
+		
 		//Add pages to application
+		app.addPage(viewDesktopMainMenu);
+		app.addPage(viewDesktopCarList);
+		app.addPage(viewDesktopCarListCarousel);
+		app.addPage(viewSalesOrder);
+		
 		app.addPage(pageMainMenu);
 		app.addPage(pageCarList);
-		app.addPage(pageDesktopCarList);
 		app.addPage(pageCarListCarousel);
 		app.addPage(pageFindDeader);
 		app.addPage(pageCarDetail);
@@ -54,8 +62,11 @@ sap.ui.controller("ui5.Shell", {
 //	onExit: function() {
 //
 //	}
-	handlePressHome: function(oEvent) {
+	
 
+	  
+	handlePressHome: function(oEvent) {
+		app.to("idMainMenu");
 	},
 	  
 	handlePressPane: function(oEvent) {

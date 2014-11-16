@@ -11,16 +11,16 @@
         </headerContent>
 		<content>
 			<Carousel xmlns="sap.m" height="100%" width="100%" loop="true">
-					<pages>
-						<Image xmlns="sap.m"
-							src="http://www.mustangspecs.com/carpics/67fastback.jpg"
-							width="300px" height="300px">
-						</Image>
-						<Image xmlns="sap.m"
-							src="http://www.alternativecars.fr/img/vehicles/600x450/3_151.jpg"
-							width="300px" height="300px">
-						</Image>
-					</pages> <!-- sap.ui.core.Control -->
+				<pages>
+					<Image xmlns="sap.m"
+						src="http://www.mustangspecs.com/carpics/67fastback.jpg"
+						width="300px" height="300px">
+					</Image>
+					<Image xmlns="sap.m"
+						src="http://www.alternativecars.fr/img/vehicles/600x450/3_151.jpg"
+						width="300px" height="300px">
+					</Image>
+				</pages>
 			</Carousel>
 		</content>
 	</Page>

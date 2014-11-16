@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<mvc:View xmlns:core="sap.ui.core" 
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns="sap.m"
+			controllerName="ui5.desktop.CarListCarousel" 
+			xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<Carousel xmlns="sap.ui.commons" width="100%" height="100%" visibleItems="3">
+		<content>
+			<Image xmlns="sap.m" width="300px" height="300px"
+				src="http://www.mustangspecs.com/carpics/67fastback.jpg"/>
+			<Image xmlns="sap.m" width="300px" height="300px"
+				src="http://www.alternativecars.fr/img/vehicles/600x450/3_151.jpg"/>
+		 	<Image xmlns="sap.m" width="300px" height="300px"
+				src="http://www.allsportauto.com/photoautre/dodge/viper_srt_10_2006/2006_dodge_viper_srt_03_m.jpg"/>
+			<Image xmlns="sap.m" width="300px" height="300px"
+				src="http://i.apreslachat.com/img/8/8/0/18088.jpg"/>
+		</content>
+	</Carousel>
+</mvc:View>

@@ -51,6 +51,14 @@ sap.ui.controller("ui5.mobile.MainMenu", {
 		app.to("idPageCarDesktopList");
 	},
 	
+	OpenDesktopCarListCarousel: function() {
+		app.to("idPageCarListDesktopCarousel");
+	},
+	
+	OpenSalesOrder: function() {
+		app.to("idViewSalesOrder");
+	},
+	
 	OpenFindDealer: function() {
 		app.to("idPageFindDealer");
 	}
