@@ -4,43 +4,42 @@
 			xmlns:mvc="sap.ui.core.mvc" 
 			xmlns="sap.ui.commons"
 			xmlns:m="sap.m"
-			xmlns:us="sap.ushell.ui.launchpad"
+			xmlns:ui="sap.suite.ui.commons"
 			controllerName="ui5.desktop.MainMenu"
 			xmlns:html="http://www.w3.org/1999/xhtml">
-			
-	<TileContainer xmlns="sap.m" width="100%" height="100%"
-		editable=""
-		allowAdd=""
-		tileMove=""
-		tileDelete=""
-		tileAdd="">
-			<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
-			<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+		
+		<TileContainer xmlns="sap.m" width="100%" height="100%"
+    		editable="true"	allowAdd="true"	tileMove="true"	tileDelete="true"	tileAdd="true">
 			<tiles>
-				<CustomTile xmlns="sap.m" removable="true" press="">
-						<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
-						<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
-						<content>
-							<InfoTile xmlns="sap.suite.ui.commons"
+                <m:StandardTile title="Test">
+                		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+                		<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+                </m:StandardTile>
+                <m:CustomTile>
+                		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+                		<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+                		<content>
+                		    <m:StandardTile title="Test">
+                            		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+                            		<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+                            </m:StandardTile>
+                            <InfoTile xmlns="sap.suite.ui.commons"
 								description="sasa"
 								title=""
 								footer=""
 								size="Auto"
 								state="Loading"
 								press="">
+                                
 									<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
 									<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
 									<content></content> <!-- sap.ui.core.Control -->
-							</InfoTile>
-
-						</content> <!-- sap.ui.core.Control -->
-				</CustomTile>
+							
+                            </InfoTile>
+                		</content> <!-- sap.ui.core.Control -->
+                </m:CustomTile>
 			</tiles> <!-- sap.ui.core.Control -->
-	</TileContainer>
-
-
-
-
+		</TileContainer>
 			
 <!-- 	<m:TileContainer id="container" tileDelete="handleTileDelete" width="100%" height="100%"> -->
 <!-- 		<m:tiles> -->
