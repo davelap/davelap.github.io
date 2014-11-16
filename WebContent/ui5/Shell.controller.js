@@ -6,6 +6,7 @@ sap.ui.controller("ui5.Shell", {
 * @memberOf ui5.Shell
 */
 	onInit: function() {
+		var app = new sap.m.App({initialPage:"idDesktopMainMenu"});
 		
 		//Create desktop views
 		var viewDesktopMainMenu 		= sap.ui.view({id:"idDesktopMainMenu", viewName:"ui5.desktop.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
