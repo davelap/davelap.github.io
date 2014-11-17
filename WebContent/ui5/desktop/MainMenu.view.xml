@@ -16,8 +16,6 @@
                 		<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
                 </m:StandardTile>
                 <m:CustomTile>
-               		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
-               		<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
                		<content>
                            <InfoTile xmlns="sap.suite.ui.commons"
 							description="sasa"
@@ -26,26 +24,16 @@
 							size="Auto"
 							state="Loading"
 							press="">
-                               
-								<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
-								<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
-								<content></content> <!-- sap.ui.core.Control -->
-						
                            </InfoTile>
                		</content> <!-- sap.ui.core.Control -->
                 </m:CustomTile>
                 <m:CustomTile>
-               		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
-               		<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
                		<content>
                			<LaunchTile xmlns="sap.suite.ui.commons"
-							id="id"
 							title="Launch"
-							icon=""
+							icon="sap-icon://sales-order"
 							link=""
 							press="">
-								<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
-								<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
 						</LaunchTile>
                		</content> <!-- sap.ui.core.Control -->
                 </m:CustomTile>
