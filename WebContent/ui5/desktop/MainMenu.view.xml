@@ -8,8 +8,8 @@
 			controllerName="ui5.desktop.MainMenu"
 			xmlns:html="http://www.w3.org/1999/xhtml">
 		
-		<TileContainer xmlns="sap.m" width="100%" height="100%"
-    		editable="true"	allowAdd="true"	tileMove="true"	tileDelete="true"	tileAdd="true">
+		<TileContainer xmlns="sap.m" width="100%" height="100%	editable="true"	
+		               allowAdd="true" tileMove="true"	tileDelete="true" tileAdd="true">
 			<tiles>
                 <m:StandardTile title="Test">
                 		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
