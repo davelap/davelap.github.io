@@ -6,7 +6,7 @@ sap.ui.controller("ui5.mobile.Products", {
 * @memberOf ui5.MainMenu
 */
 	onInit: function() {
-	   var sURI= "http://services.odata.org/Northwind/Northwind.svc/"
+	   var sURI= "http://services.odata.org/Northwind/Northwind.svc/";
        var oModel = new sap.ui.model.odata.ODataModel(sURI,true);
        sap.ui.getCore().setModel(oModel);
       
