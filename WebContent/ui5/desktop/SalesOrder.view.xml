@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<mvc:View 	xmlns:core="sap.ui.core" 
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns="sap.m"
+			controllerName="ui5.desktop.SalesOrder" 
+			xmlns:html="http://www.w3.org/1999/xhtml">
+	<Panel xmlns="sap.ui.commons" text="Header" tooltip="Sales Order Header Data">
+		<content>
+		
+		</content>
+	</Panel>
+	<Panel xmlns="sap.ui.commons" text="Items" tooltip="Sales Order Items">
+		<content>
+		
+		</content>
+	</Panel>
+</mvc:View>

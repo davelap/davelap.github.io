@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<mvc:View xmlns:core="sap.ui.core" 
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns="sap.m"
+			controllerName="ui5.mobile.Products" 
+			xmlns:html="http://www.w3.org/1999/xhtml">
+  <!--  <Table xmlns="sap.m" items="{/Products}">-->
+<!--	<items>-->
+  <!--        <ColumnListItem>-->
+  <!--          <cells>-->
+  <!--            <Label xmlns="sap.m" text="{Name}" />-->
+  <!--            <Label xmlns="sap.m" text="{Category}" />-->
+  <!--          </cells>-->
+  <!--        </ColumnListItem>-->
+		<!--</items>-->
+		<!--<columns>-->
+		<!--	<Column>-->
+		<!--		<header><Label text="Name"/></header>-->
+		<!--	</Column>-->
+		<!--	<Column>-->
+		<!--		<header><Label text="Category"/></header>-->
+		<!--	</Column>-->
+	<!--	</columns>-->
+  <!--  </Table>-->
+    
+</mvc:View>
