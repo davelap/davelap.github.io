@@ -6,10 +6,12 @@ sap.ui.controller("ui5.mobile.Products", {
 * @memberOf ui5.MainMenu
 */
 	onInit: function() {
-	   var sURI = "http://services.odata.org/Northwind/Northwind.svc/";
-       var oModel = new sap.ui.model.odata.ODataModel(sURI,true);
-       sap.ui.getCore().setModel(oModel);
-      
+        var oModel = new sap.ui.model.odata.ODataModel(
+                                      "http://gw.esworkplace.sap.com/sap/opu/odata/IWBEP/RMTSAMPLEFLIGHT_2",
+                                                          false,
+                                                          "GW@ESW",
+                                                          "ESW4GW");
+         sap.ui.getCore().setModel(oModel);
 	}
 
 /**
