@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<mvc:View xmlns:core="sap.ui.core" 
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns="sap.m"
+			controllerName="ui5.mobile.ODataTest" 
+			xmlns:html="http://www.w3.org/1999/xhtml">
+		<Button xmlns="sap.m"
+			text="Test"
+			type="Default"
+			width=""
+			enabled="true"
+			visible="true"
+			icon=""
+			iconFirst="true"
+			activeIcon=""
+			iconDensityAware="true"
+			tap=""
+			press="">
+		</Button>
+		
+</mvc:View>

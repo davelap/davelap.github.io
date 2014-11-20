@@ -11,20 +11,6 @@ sap.ui.controller("ui5.mobile.CarDetail", {
 						model: "Mustang",
 						year: "1967"
 					};
-		
-		var oModel2 = new sap.ui.model.json.JSONModel();
-		//alert(oModel2.getJSON());
-		//oModel2.loadData("model/Maker.json");
-		
-//		$.ajax({
-//		            type: 'GET',
-//		            url : "model/Maker.json",
-//		            dataType: 'json',
-//		            success: function(data,textStatus,jqXHR) {
-//		},
-//		error : function(jqXHR,textStatus,errorThrown) {
-//			alert("KO");
-//		}});
 
 		var oDataMakers = {
 							"makers": 

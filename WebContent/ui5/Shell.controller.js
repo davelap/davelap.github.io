@@ -6,36 +6,45 @@ sap.ui.controller("ui5.Shell", {
 * @memberOf ui5.Shell
 */
 	onInit: function() {
-		var app = new sap.m.App({initialPage:"idDesktopMainMenu"});
 		
-		//Create desktop views
-		var viewDesktopMainMenu 		= sap.ui.view({id:"idDesktopMainMenu", viewName:"ui5.desktop.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
-		var viewDesktopCarList 			= sap.ui.view({id:"idPageCarDesktopList", viewName:"ui5.desktop.CarList", type:sap.ui.core.mvc.ViewType.XML});
-		var viewDesktopCarListCarousel 	= sap.ui.view({id:"idPageCarListDesktopCarousel", viewName:"ui5.desktop.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
-		var viewSalesOrder 				= sap.ui.view({id:"idViewSalesOrder", viewName:"ui5.desktop.SalesOrder", type:sap.ui.core.mvc.ViewType.XML});	
 		
-		//Create mobile views
-		var pageMainMenu = sap.ui.view({id:"idMainMenu", viewName:"ui5.mobile.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
-		var pageCarListCarousel = sap.ui.view({id:"idPageCarListCarousel", viewName:"ui5.mobile.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
-		var pageCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.mobile.CarList", type:sap.ui.core.mvc.ViewType.XML});
-		var pageCarDetail = sap.ui.view({id:"idPageCarDetail", viewName:"ui5.mobile.CarDetail", type:sap.ui.core.mvc.ViewType.XML});
-		var pageFindDeader = sap.ui.view({id:"idPageFindDealer", viewName:"ui5.mobile.FindDealer", type:sap.ui.core.mvc.ViewType.XML});
+	    //var oShell = this.getView().byId("myShell");
+	    //var oApp = this.getView().byId("myApp");
+	    
+	    
+ 	    //var myShell = sap.ui.view({id:"myShell", viewName:"ui5.Shell", type:sap.ui.core.mvc.ViewType.XML});
+ 	    //var oApp = new sap.m.App({id:"myApp", initialPage:"idMainMenu"});
+ 	    
+// 		//Create mobile views
+// 		var viewMobileMainMenu = sap.ui.view({id:"idMainMenu",  viewName:"ui5.mobile.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
+// 		var viewMobileCarListCarousel = sap.ui.view({id:"idPageCarListCarousel", viewName:"ui5.mobile.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
+// 		var viewMobileCarList = sap.ui.view({id:"idPageCarList", viewName:"ui5.mobile.CarList", type:sap.ui.core.mvc.ViewType.XML});
+// 		var viewMobileCarDetail = sap.ui.view({id:"idPageCarDetail", viewName:"ui5.mobile.CarDetail", type:sap.ui.core.mvc.ViewType.XML});
+// 		var viewMobileFindDeader = sap.ui.view({id:"idPageFindDealer", viewName:"ui5.mobile.FindDealer", type:sap.ui.core.mvc.ViewType.XML});
+// 		var viewoDataTest = sap.ui.view({id:"idoDataTest", viewName:"ui5.mobile.ODataTest", type:sap.ui.core.mvc.ViewType.XML});
 
+// 		//Create desktop views
+// 		var viewDesktopMainMenu 		= sap.ui.view({id:"idDesktopMainMenu", viewName:"ui5.desktop.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
+// 		var viewDesktopCarList 			= sap.ui.view({id:"idPageCarDesktopList", viewName:"ui5.desktop.CarList", type:sap.ui.core.mvc.ViewType.XML});
+// 		var viewDesktopCarListCarousel 	= sap.ui.view({id:"idPageCarListDesktopCarousel", viewName:"ui5.desktop.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
+// 		var viewSalesOrder 				= sap.ui.view({id:"idViewSalesOrder", viewName:"ui5.desktop.SalesOrder", type:sap.ui.core.mvc.ViewType.XML});	
 		
-		//Add pages to application
-		app.addPage(viewDesktopMainMenu);
-		app.addPage(viewDesktopCarList);
-		app.addPage(viewDesktopCarListCarousel);
-		app.addPage(viewSalesOrder);
+// 		//Add Mobile Views
+// 		oApp.addPage(viewMobileMainMenu);
+// 		oApp.addPage(viewMobileCarList);
+// 		oApp.addPage(viewMobileCarListCarousel);
+// 		oApp.addPage(viewMobileFindDeader);
+// 		oApp.addPage(viewMobileCarDetail);
+// 		oApp.addPage(viewoDataTest);
+
+// 		//Add desktop pages to application
+// 		oApp.addPage(viewDesktopMainMenu);
+// 		oApp.addPage(viewDesktopCarList);
+// 		oApp.addPage(viewDesktopCarListCarousel);
+// 		oApp.addPage(viewSalesOrder);
 		
-		app.addPage(pageMainMenu);
-		app.addPage(pageCarList);
-		app.addPage(pageCarListCarousel);
-		app.addPage(pageFindDeader);
-		app.addPage(pageCarDetail);
-		
-		var oShell = this.getView().byId("myShell");
-		oShell.addContent(app);
+// 		oShell.addContent(oApp);
+// 		oShell.placeAt("body");
 	},
 
 /**
@@ -66,13 +75,55 @@ sap.ui.controller("ui5.Shell", {
 	
 
 	  
-	handlePressHome: function(oEvent) {
+	handlePressHome: function() {
+	    var app = this.getView().byId("myApp");
 		app.to("idMainMenu");
 	},
 	  
-	handlePressPane: function(oEvent) {
+	handlePressPane: function() {
 	    var oShell = this.getView().byId("myShell");
 	    var bState = oShell.getShowPane();
 	    oShell.setShowPane(!bState);
+	},
+	
+	OpenCarList: function() {
+	    var oApp = this.getView().byId("myApp");
+		oApp.to("idPageCarDetail");
+	},
+	
+	OpenCarDetail: function() {
+	    var oApp = this.getView().byId("myApp");
+		oApp.to("idPageCarDetail");
+	},
+	
+	OpenCarListCarousel: function() {
+	    var oApp = this.getView().byId("myApp");
+		oApp.to("idPageCarListCarousel");
+	},
+	
+	OpenDesktopCarList: function() {
+	    var oApp = this.getView().byId("myApp");
+		oApp.to("idPageCarDesktopList");
+	},
+	
+	OpenDesktopCarListCarousel: function() {
+	    var oApp = this.getView().byId("myApp");
+		oApp.to("idPageCarListDesktopCarousel");
+	},
+	
+	OpenSalesOrder: function() {
+	    var oApp = this.getView().byId("myApp");
+		oApp.to("idViewSalesOrder");
+	},
+	
+	OpenODataTest: function(){
+	    var oApp = this.getView().byId("myApp");
+		oApp.to("idoDataTest");
+	},
+	
+	OpenFindDealer: function() {
+	    var oApp = this.getView().byId("myApp");
+		oApp.to("idPageFindDealer");
 	}
+	
 });

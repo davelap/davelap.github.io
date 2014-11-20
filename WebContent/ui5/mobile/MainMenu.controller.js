@@ -5,9 +5,9 @@ sap.ui.controller("ui5.mobile.MainMenu", {
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf ui5.MainMenu
 */
-//	onInit: function() {
-//
-//	},
+	onInit: function() {
+	    
+	},
 
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
@@ -36,30 +36,38 @@ sap.ui.controller("ui5.mobile.MainMenu", {
 //	}
 	
 	OpenCarList: function() {
-		app.to("idPageCarList");
+		oApp.to("idPageCarDetail");
 	},
 	
 	OpenCarDetail: function() {
-		app.to("idPageCarDetail");
+		oApp.to("idPageCarDetail");
 	},
 	
 	OpenCarListCarousel: function() {
-		app.to("idPageCarListCarousel");
+		oApp.to("idPageCarListCarousel");
 	},
 	
 	OpenDesktopCarList: function() {
-		app.to("idPageCarDesktopList");
+		oApp.to("idPageCarDesktopList");
 	},
 	
 	OpenDesktopCarListCarousel: function() {
-		app.to("idPageCarListDesktopCarousel");
+		oApp.to("idPageCarListDesktopCarousel");
 	},
 	
 	OpenSalesOrder: function() {
-		app.to("idViewSalesOrder");
+		oApp.to("idViewSalesOrder");
+	},
+	
+	OpenODataTest: function(){
+		oApp.to("idoDataTest");
+	},
+	
+	OpenProducts: function(){
+	    oApp.to("idProducts");
 	},
 	
 	OpenFindDealer: function() {
-		app.to("idPageFindDealer");
+		oApp.to("idPageFindDealer");
 	}
 });

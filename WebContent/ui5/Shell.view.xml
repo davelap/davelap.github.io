@@ -4,14 +4,41 @@
 		  xmlns:l="sap.ui.layout"
 		  xmlns:u="sap.ui.unified"
 		  xmlns:mvc="sap.ui.core.mvc"
-		  xmlns:us="sap.ushell.ui.launchpad"
-		  xmlns:su="sap.suite.ui.commons"
 		  xmlns="sap.m"
 		  class="viewPadding">
 		  
   <u:Shell 	id="myShell" showPane="false" icon="http://www.mane.com/sites/all/themes/tao/shinto/mane/images/logo.png">
 		<u:content>
-
+            <!--<App xmlns="sap.m"-->
+            <!--	id="myApp"-->
+            <!--	height="100%"-->
+            <!--	width="100%"-->
+            <!--	visible="true"-->
+            <!--	defaultTransitionName=""-->
+            <!--	homeIcon=""-->
+            <!--	backgroundColor=""-->
+            <!--	backgroundImage=""-->
+            <!--	backgroundRepeat="false"-->
+            <!--	backgroundOpacity="1"-->
+            <!--	initialPage="idMainMenu"-->
+            <!--	navigate=""-->
+            <!--	afterNavigate=""-->
+            <!--	orientationChange="">-->
+            <!--	<pages>-->
+            <!--	   <TileContainer  xmlns="sap.m" id="container" tileDelete="handleTileDelete" width="100%" height="100%">-->
+            <!--          	<tiles>-->
+            <!--          	    <StandardTile xmlns="sap.m" icon="sap-icon://sales-order" 	type="None" title="Sales Order" 			info="Desktop" 					press="OpenSalesOrder" />-->
+            <!--          		<StandardTile xmlns="sap.m" icon="sap-icon://sales-order" 	type="None" title="oDataTEst " 			    info="Desktop" 					press="OpenODataTest" />-->
+            <!--          		<StandardTile xmlns="sap.m" icon="sap-icon://list" 			type="None" title="Car Listing" 			info="List of cars" 			press="OpenCarList" />-->
+            <!--          		<StandardTile xmlns="sap.m" icon="sap-icon://list" 			type="None" title="Car Listing" 			info="Desktop - List of cars" 	press="OpenDesktopCarList" />-->
+            <!--              	<StandardTile xmlns="sap.m" icon="sap-icon://insurance-car" type="None" title="Car Listing Carousel" 	info="Car Carousel" 			press="OpenCarListCarousel" />-->
+            <!--              	<StandardTile xmlns="sap.m" icon="sap-icon://insurance-car" type="None" title="Car Listing Carousel" 	info="Desktop - Car Carousel" 	press="OpenDesktopCarListCarousel" />-->
+            <!--              	<StandardTile xmlns="sap.m" icon="sap-icon://retail-store" 	type="None" title="Find Dealer" 			info="Find Dealer" 				press="OpenFindDealer" />-->
+            <!--              	<StandardTile xmlns="sap.m" icon="sap-icon://car-rental" 	type="None" title="Get Car Detail" 			info="Car Detail" 				press="OpenCarDetail" />-->
+            <!--          	</tiles>-->
+            <!--          </TileContainer>-->
+            <!--	</pages>-->
+            <!--</App>-->
 		</u:content>
 		<u:paneContent>
 		

@@ -11,29 +11,29 @@
         </headerContent>
 		<content>
 
-			<Table xmlns="sap.m" title="Car Listing22" items="{/cars/cars}" visiblerowcount="7" selectionMode="Multi" selectionBehavior="RowSelector">
-				<items> <!-- sap.m.ListItemBase -->
+			<Table title="Car Listing22" items="{/cars/cars}" visiblerowcount="7" selectionMode="Multi" selectionBehavior="RowSelector">
+				<items>
 		          <ColumnListItem>
 		            <cells>
-		              <Label xmlns="sap.m" text="{maker}" />
-		              <Label xmlns="sap.m" text="{model}" />
-		              <Label xmlns="sap.m" text="{year}" />
-		              <RatingIndicator xmlns="sap.m" value="{rating}" enabled="false"/>
+		              <Label text="{maker}" />
+		              <Label text="{model}" />
+		              <Label text="{year}" />
+		              <RatingIndicator value="{rating}" enabled="false"/>
 		            </cells>
 		          </ColumnListItem>
 				</items>
 				<columns>
-					<Column xmlns="sap.m">
-						<header><Label xmlns="sap.m" text="Maker"/></header>
+					<Column>
+						<header><Label text="Maker"/></header>
 					</Column>
-					<Column xmlns="sap.m">
-						<header><Label xmlns="sap.m" text="Model"/></header>
+					<Column>
+						<header><Label text="Model"/></header>
 					</Column>
-					<Column xmlns="sap.m">
-						<header><Label xmlns="sap.m" text="Year"/></header>
+					<Column>
+						<header><Label text="Year"/></header>
 					</Column>
-					<Column xmlns="sap.m">
-						<header><Label xmlns="sap.m" text="Rating"/></header>
+					<Column>
+						<header><Label text="Rating"/></header>
 					</Column>
 				</columns>
 			</Table>

@@ -7,15 +7,19 @@
 			xmlns:html="http://www.w3.org/1999/xhtml">
 		
 
-      <TileContainer  xmlns="sap.m" id="container" tileDelete="handleTileDelete" width="100%" height="100%">
+      <TileContainer  xmlns="sap.m" tileDelete="handleTileDelete" width="100%" height="100%">
       	<tiles>
-      	    <StandardTile xmlns="sap.m" icon="sap-icon://sales-order" 	type="None" title="Sales Order" 			info="Desktop" 					press="OpenSalesOrder" />
-      		<StandardTile xmlns="sap.m" icon="sap-icon://list" 			type="None" title="Car Listing" 			info="List of cars" 			press="OpenCarList" />
-      		<StandardTile xmlns="sap.m" icon="sap-icon://list" 			type="None" title="Car Listing" 			info="Desktop - List of cars" 	press="OpenDesktopCarList" />
-          	<StandardTile xmlns="sap.m" icon="sap-icon://insurance-car" type="None" title="Car Listing Carousel" 	info="Car Carousel" 			press="OpenCarListCarousel" />
-          	<StandardTile xmlns="sap.m" icon="sap-icon://insurance-car" type="None" title="Car Listing Carousel" 	info="Desktop - Car Carousel" 	press="OpenDesktopCarListCarousel" />
-          	<StandardTile xmlns="sap.m" icon="sap-icon://retail-store" 	type="None" title="Find Dealer" 			info="Find Dealer" 				press="OpenFindDealer" />
-          	<StandardTile xmlns="sap.m" icon="sap-icon://car-rental" 	type="None" title="Get Car Detail" 			info="Car Detail" 				press="OpenCarDetail" />
+      	    <StandardTile xmlns="sap.m" icon="sap-icon://sales-order" 	 title="Sales Order" 			info="Desktop" 					press="OpenSalesOrder" />
+      		<StandardTile xmlns="sap.m" icon="sap-icon://sales-order"    title="oDataTEst " 			   info="Desktop" 				press="OpenODataTest" />
+      		<StandardTile xmlns="sap.m" icon="sap-icon://list" 			 title="Car Listing" 			info="List of cars" 			press="OpenCarList" />
+      		<StandardTile xmlns="sap.m" icon="sap-icon://list" 			 title="Car Listing" 			info="Desktop - List of cars" 	press="OpenDesktopCarList" />
+          	<StandardTile xmlns="sap.m" icon="sap-icon://insurance-car"  title="Car Listing Carousel" 	info="Car Carousel" 			press="OpenCarListCarousel" />
+          	<StandardTile xmlns="sap.m" icon="sap-icon://insurance-car"  title="Car Listing Carousel" 	info="Desktop - Car Carousel" 	press="OpenDesktopCarListCarousel" />
+          	<StandardTile xmlns="sap.m" icon="sap-icon://retail-store" 	 title="Find Dealer" 			info="Find Dealer" 				press="OpenFindDealer" />
+          	<StandardTile xmlns="sap.m" icon="sap-icon://car-rental"     title="Get Car Detail" 		info="Car Detail" 				press="OpenCarDetail" />
+          	<StandardTile xmlns="sap.m" icon="sap-icon://car-rental" 	 title="Get Car Detail" 		info="Car Detail" 				press="OpenCarDetail" />
+      	    <StandardTile xmlns="sap.m" icon="sap-icon://car-rental" 	 title="Products" 			    info="Northwind Products" 		press="OpenProducts" />
+      	    
       	</tiles>
       </TileContainer>
 

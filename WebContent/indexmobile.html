@@ -11,9 +11,24 @@
 			data-sap-ui-libs='sap.m,sap.ui.commons,sap.ui.table,sap.suite.ui.commons'
 			data-sap-ui-xx-bindingSyntax="complex">
 		</script> 
+		
+		<script src="Main.js"></script>
 
 		<script>
 			sap.ui.localResources("ui5");
+			initApplication(); 
+ 			//var oShellView = sap.ui.view({id:"idShellView", viewName:"ui5.Shell", type:sap.ui.core.mvc.ViewType.XML});
+		    //var oGlobalApp = new sap.m.App({id:"myApp",initialPage:"idMainMenu"});
+		    //oShellView.placeAt("body");
+		    
+			
+			
+
+			
+			
+			
+			
+	
 			//src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'
 // 			//Create mobile application
 // 			var app = new sap.m.App({initialPage:"idMainMenu"});
@@ -27,7 +42,8 @@
 // 			var pageFindDeader = sap.ui.view({id:"idPageFindDealer", viewName:"ui5.mobile.FindDealer", type:sap.ui.core.mvc.ViewType.XML});
  			//Create mobile application
 			
- 			var myShell = sap.ui.view({id:"idShell", viewName:"ui5.Shell", type:sap.ui.core.mvc.ViewType.XML});
+ 			//var myShell = sap.ui.view({id:"myShell", viewName:"ui5.Shell", type:sap.ui.core.mvc.ViewType.XML});
+ 			//var oApp = new sap.m.App({id:"myApp", initialPage:"idMainMenu"});
 			
 // 			//Add pages to application
 // 			app.addPage(pageMainMenu);
@@ -72,7 +88,7 @@
 			//oShell.addContent(pageMainMenu);
 			
 			//Place shell
-			myShell.placeAt('body');
+			//myShell.placeAt('body');
 		</script>
 	</head>
 	<body class="sapUiBody" id="body" role="application">
