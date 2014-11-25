@@ -19,7 +19,7 @@ sap.ui.controller("ui5.desktop.CarList", {
 		
 		oModel.setData({cars : oDataCarListing});
 		this.getView().setModel(oModel);
-	},
+	}
 
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

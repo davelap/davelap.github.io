@@ -9,7 +9,6 @@
 			xmlns:html="http://www.w3.org/1999/xhtml">
 	<m:Page title="Title">
 		<m:content>
-	
 			<Table xmlns="sap.ui.table" rows="{/cars/cars}">
 				<columns>
 					<Column xmlns="sap.ui.table" sortProperty="maker" filterProperty="maker">

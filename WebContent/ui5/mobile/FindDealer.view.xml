@@ -5,12 +5,19 @@
 			xmlns="sap.m"
 			controllerName="ui5.mobile.FindDealer" 
 			xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="DealerMap">
-	    <headerContent>
-	     	<Button xmlns="sap.m" type="Back" press="BackMainMenu"/>
-        </headerContent>
-		<content>
-
-		</content>
-	</Page>
+			
+    <Page id="mainPage" enableScrolling="false" title="GMaps">
+        <!--<gmaps:Map height="250px" zoom="12" lat="-33.895" lng="151.275">-->
+        <!--    <gmaps:markers>-->
+        <!--        <gmaps:Marker lat="-33.895" lng="151.275" info="Bondi Beach" />-->
+        <!--    </gmaps:markers>-->
+        <!--</gmaps:Map>-->
+        <!--<VBox fitContainer="true" justifyContent="Center" alignItems="Center">-->
+        <!--    <HBox fitContainer="true" justifyContent="Center" alignItems="Center">-->
+        <!--        <Input id="inpSearch" editable="true" value="" maxLength="80"/>-->
+        <!--        <Button id="bntSearch" text="Search" tap="actSearch" />     -->
+        <!--    </HBox>-->
+        <!--    <HBox id="map_canvas" fitContainer="true" justifyContent="Center" alignItems="Center" />-->
+        <!--</VBox>-->
+    </Page>
 </core:View>

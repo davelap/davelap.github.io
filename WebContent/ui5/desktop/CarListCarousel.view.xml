@@ -3,6 +3,7 @@
 <mvc:View xmlns:core="sap.ui.core" 
 			xmlns:mvc="sap.ui.core.mvc" 
 			xmlns="sap.m"
+			xmlns:a="sap.ui.table"
 			controllerName="ui5.desktop.CarListCarousel" 
 			xmlns:html="http://www.w3.org/1999/xhtml">
 	

@@ -10,7 +10,8 @@
       <TileContainer  xmlns="sap.m" tileDelete="handleTileDelete" width="100%" height="100%">
       	<tiles>
       	    <StandardTile xmlns="sap.m" icon="sap-icon://sales-order" 	 title="Sales Order" 			info="Desktop" 					press="OpenSalesOrder" />
-      		<StandardTile xmlns="sap.m" icon="sap-icon://sales-order"    title="oDataTEst " 			   info="Desktop" 				press="OpenODataTest" />
+      	    <StandardTile xmlns="sap.m" icon="sap-icon://list" 	         title="Sales Order List" 		info="Desktop" 					press="OpenSalesOrderList" />
+      	    <StandardTile xmlns="sap.m" icon="sap-icon://list" 	         title="Materials List" 		info="Desktop" 					press="OpenMaterialsList" />
       		<StandardTile xmlns="sap.m" icon="sap-icon://list" 			 title="Car Listing" 			info="List of cars" 			press="OpenCarList" />
       		<StandardTile xmlns="sap.m" icon="sap-icon://list" 			 title="Car Listing" 			info="Desktop - List of cars" 	press="OpenDesktopCarList" />
           	<StandardTile xmlns="sap.m" icon="sap-icon://insurance-car"  title="Car Listing Carousel" 	info="Car Carousel" 			press="OpenCarListCarousel" />

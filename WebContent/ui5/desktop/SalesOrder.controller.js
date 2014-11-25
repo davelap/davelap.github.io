@@ -5,9 +5,18 @@ sap.ui.controller("ui5.desktop.SalesOrder", {
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf ui5.desktop.SalesOrder
 */
-//	onInit: function() {
-//
-//	},
+	onInit: function() {
+        var oModel = new sap.ui.model.json.JSONModel("model/salesorder.json");
+        this.getView().setModel(oModel);
+        this.getView().bindElement("/SalesOrderCollection/0");
+        
+        // set i18n model
+        var i18nModel = new sap.ui.model.resource.ResourceModel({
+        bundleUrl : "i18n/sales.properties"
+        });
+        this.getView().setModel(i18nModel, "i18n");
+
+	}
 
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

@@ -1,0 +1,30 @@
+<mvc:View controllerName="ui5.desktop.MaterialsList"
+    xmlns="sap.ui.commons"
+    xmlns:table="sap.ui.table"
+    xmlns:sap.ui.core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" >
+
+
+    <table:Table width="100%"  rows="{/MaterialsCollection}">
+		<table:Column sortProperty="MaterialNo" filterProperty="MaterialNo">
+			<Label text="{i18n>MaterialNo}"/>
+			<table:template >
+				<TextField editable="false" value="{MaterialNo}"/>
+			</table:template>
+		</table:Column>
+		<table:Column sortProperty="BaseUOM" filterProperty="BaseUOM">
+			<Label text="{i18n>BaseUOM}"/>
+			<table:template>
+				<TextField editable="false" value="{BaseUOM}"/>
+			</table:template>
+		</table:Column>
+		<table:Column sortProperty="PlantData/0/PlantNo" filterProperty="PlantData/0/PlantNo">
+			<Label text="{i18n>PlantNo}"/>
+			<table:template>
+				<TextField editable="false" value="{PlantData/0/PlantNo}"/>
+			</table:template>
+		</table:Column>
+	</table:Table>
+	
+	
+</mvc:View>

@@ -1,0 +1,31 @@
+{
+	"MaterialsCollection": 
+    [
+		{
+		    "MaterialNo": "Product 1",
+		    "BaseUOM": "EA",
+		    "PlantData": 
+		    [
+		        {
+		            "PlantNo": "0101"
+		        },
+		        {
+		            "PlantNo": "0102"
+		        }
+		    ]
+		},
+		{
+		    "MaterialNo": "Product 2",
+		    "BaseUOM": "EA",
+		    "PlantData": 
+		    [
+		        {
+		            "PlantNo": "0101"
+		        },
+		        {
+		            "PlantNo": "0102"
+		        }
+		    ]
+		}
+	]
+}

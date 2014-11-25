@@ -55,8 +55,16 @@ sap.ui.controller("ui5.mobile.MainMenu", {
 		oApp.to("idPageCarListDesktopCarousel");
 	},
 	
+	OpenMaterialsList: function() {
+		oApp.to("idViewMaterialsList");
+	},
+	
 	OpenSalesOrder: function() {
 		oApp.to("idViewSalesOrder");
+	},
+	
+	OpenSalesOrderList: function() {
+		oApp.to("idViewSalesOrderList");
 	},
 	
 	OpenODataTest: function(){

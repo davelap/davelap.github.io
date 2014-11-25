@@ -4,33 +4,22 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
 
+		
 		<script id='sap-ui-bootstrap'
-			src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'
-			data-sap-ui-theme='sap_goldreflection'
-			data-sap-ui-libs='sap.ui.commons,sap.ui.ux3,sap.m,sap.ui.table'
+			src='https://sapui5.hana.ondemand.com/resources/sap-ui-core.js'
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-libs="sap.m,sap.ui.commons,sap.ui.table,sap.ui.layout"
 			data-sap-ui-xx-bindingSyntax="complex">
 		</script> 
+		
+		<script src="Main.js"></script>
 
 		<script>
-				sap.ui.localResources("ui5");
-				
-				var oShell = new sap.ui.ux3.Shell("myShell", {
-					appTitle: "SAPUI5 Gold Reflection Shell",
-					appIconTooltip: "SAP logo",
-					showLogoutButton: true,
-					showSearchTool: true,
-					showInspectorTool: true,
-					showFeederTool: true
-					});
-				
-				var view = sap.ui.view({id:"idMainMenu", viewName:"ui5.desktop.MainMenu", type:sap.ui.core.mvc.ViewType.XML});
-				
-				//place view in app shell, app shell in uiArea
-				oShell.setContent(view);
-				oShell.placeAt("content");
+			sap.ui.localResources("ui5");
+			sap.ui.localResources("i18n");
+			initApplication(); 
 		</script>
 	</head>
-	<body class="sapUiBody" role="application">
-		<div id="content"></div>
+	<body class="sapUiBody" id="body" role="application">
 	</body>
 </html>

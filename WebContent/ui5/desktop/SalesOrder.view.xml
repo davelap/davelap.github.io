@@ -1,18 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE xml>
-<mvc:View 	xmlns:core="sap.ui.core" 
-			xmlns:mvc="sap.ui.core.mvc" 
-			xmlns="sap.m"
-			controllerName="ui5.desktop.SalesOrder" 
-			xmlns:html="http://www.w3.org/1999/xhtml">
-	<Panel xmlns="sap.ui.commons" text="Header" tooltip="Sales Order Header Data">
-		<content>
-		
-		</content>
-	</Panel>
-	<Panel xmlns="sap.ui.commons" text="Items" tooltip="Sales Order Items">
-		<content>
-		
-		</content>
-	</Panel>
-</mvc:View>
+<sap.ui.core.mvc:View controllerName="ui5.desktop.SalesOrder"
+    xmlns="sap.ui.commons"
+    xmlns:m="sap.m"
+    xmlns:layout="sap.ui.layout.form"
+    xmlns:table="sap.ui.table"
+    xmlns:sap.ui.core="sap.ui.core" 
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+
+    <m:ObjectHeader title="{SoId}" number="{NetAmount}" numberUnit="{CurrencyCode}" >
+    </m:ObjectHeader>
+    <TabStrip width="100%">
+    	<tabs>
+    	    <Tab text="General Data">
+	    		<content>
+    		        <layout:SimpleForm maxContainerCols="2" editable="true">
+                        <layout:content>
+    	    		        <Label text="{i18n>SalesOrderNo}"/>
+                            <TextField value="{SoId}"/>
+                        </layout:content>
+                    </layout:SimpleForm>
+	    		</content>
+    	    </Tab>
+    	    <Tab text="Price">
+	    		<content>
+    		        <layout:SimpleForm maxContainerCols="2" editable="true">
+                        <layout:content>
+                            <Label text="{i18n>GrossAmount}"/>
+                            <TextField value="{GrossAmount}"/>
+                            <Label text="{i18n>NetAmount}"/>
+                            <TextField value="{NetAmount}"/>
+                            <Label text="{i18n>CurrencyCode}"/>
+                            <TextField value="{CurrencyCode}"/>
+                            <Label text="{i18n>TaxAmount}"/>
+                            <TextField value="{TaxAmount}"/>
+                        </layout:content>
+                    </layout:SimpleForm>
+	    		</content>
+    	    </Tab>
+    	</tabs>
+    </TabStrip>
+    
+    <Panel text="Items">
+        <content>
+            <table:Table width="100%"  rows="{LineItems}">
+        		<table:Column >
+        			<Label text="Item No"/>
+        			<table:template>
+        				<TextField editable="false" value="{SoItemPos}"/>
+        			</table:template>
+        		</table:Column>
+        		<table:Column>
+        			<Label text="Product Id"/>
+        			<table:template>
+        				<TextField value="{ProductId}"/>
+        			</table:template>
+        		</table:Column>
+        		<table:Column>
+        			<Label text="Description"/>
+        			<table:template>
+        				<TextField value="{ProductName}"/>
+        			</table:template>
+        		</table:Column>
+        	</table:Table>
+        </content>
+    </Panel>
+</sap.ui.core.mvc:View>
