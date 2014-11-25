@@ -62,7 +62,6 @@ sap.ui.controller("ui5.mobile.FindDealer", {
         
         this.geocoder.geocode({ "address": "laval,québec" }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
-                map.setCenter(results[0].geometry.location);
                 var marker = new google.maps.Marker({
                     map: map,
                     position: results[0].geometry.location,
@@ -73,9 +72,12 @@ sap.ui.controller("ui5.mobile.FindDealer", {
             }
         });
         
-        this.geocoder.geocode({ "address": "longueuil,québec" }, function (results, status) {
+        
+    }
+    
+    addMarkerToMap: function(map, myaddress){
+        this.geocoder.geocode({ "address": myaddress }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
-                map.setCenter(results[0].geometry.location);
                 var marker = new google.maps.Marker({
                     map: map,
                     position: results[0].geometry.location,
