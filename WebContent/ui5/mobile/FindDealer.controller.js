@@ -54,18 +54,10 @@ sap.ui.controller("ui5.mobile.FindDealer", {
                     animation: google.maps.Animation.DROP,
                     title: mytitle
                 });
-                google.maps.event.addListener(marker, "click", toggleBounce);
+                marker.setAnimation(google.maps.Animation.BOUNCE);
                 marker.setMap(map);
             }
         });
-    },
-    toggleBounce: function (mymarker) {
-
-      if (mymarker.getAnimation() != null) {
-        mymarker.setAnimation(null);
-      } else {
-        mymarker.setAnimation(google.maps.Animation.BOUNCE);
-      }
     },
     actSearch: function () {
         var map = this.map;
