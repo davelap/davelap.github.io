@@ -72,7 +72,7 @@ sap.ui.controller("ui5.mobile.FindDealer", {
             }
         });
         
-        
+        addMarkerToMap(map,"laval, québec");
     }
     
     addMarkerToMap: function(map, myaddress){
