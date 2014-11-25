@@ -45,6 +45,17 @@ sap.ui.controller("ui5.mobile.FindDealer", {
 //	onExit: function() {
 //
 //	}
+    addMarkerToMap: function (map, myaddress) {
+        this.geocoder.geocode({ "address": myaddress }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: results[0].geometry.location,
+                    animation: google.maps.Animation.DROP
+                });
+            }
+        });
+    },
     actSearch: function () {
         var map = this.map;
         var address = this.getView().byId("inpSearch").getValue();
@@ -72,20 +83,8 @@ sap.ui.controller("ui5.mobile.FindDealer", {
             }
         });
         
-        addMarkerToMap(map,"laval, québec");
+        this.addMarkerToMap(map,"laval, québec");
+        this.addMarkerToMap(map,"blainville, québec");
     }
-    
-    addMarkerToMap: function(map, myaddress){
-        this.geocoder.geocode({ "address": myaddress }, function (results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: results[0].geometry.location,
-                    animation: google.maps.Animation.DROP
-                });
-            } else {
-                alert("Geocode was not successful for the following reason: " + status);
-            }
-        });
-    }
+
 });
