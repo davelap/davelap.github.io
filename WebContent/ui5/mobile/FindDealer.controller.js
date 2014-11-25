@@ -27,6 +27,7 @@ sap.ui.controller("ui5.mobile.FindDealer", {
 	onAfterRendering: function() {
         if (!this.initialized) {
             this.initialized = true;
+            /*global google*/
             this.geocoder = new google.maps.Geocoder();
             var mapOptions = {
                 center: new google.maps.LatLng(-34.397, 150.644),
@@ -47,12 +48,12 @@ sap.ui.controller("ui5.mobile.FindDealer", {
 //	}
     addMarkerToMap: function (map, myaddress) {
         this.geocoder.geocode({ "address": myaddress }, function (results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
+            if (status === google.maps.GeocoderStatus.OK) {
                 var marker = new google.maps.Marker({
-                    map: map,
                     position: results[0].geometry.location,
                     animation: google.maps.Animation.DROP
                 });
+                marker.setMap(map);
             }
         });
     },
@@ -60,26 +61,12 @@ sap.ui.controller("ui5.mobile.FindDealer", {
         var map = this.map;
         var address = this.getView().byId("inpSearch").getValue();
         this.geocoder.geocode({ "address": address }, function (results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
+            if (status === google.maps.GeocoderStatus.OK) {
                 map.setCenter(results[0].geometry.location);
                 var marker = new google.maps.Marker({
-                    map: map,
                     position: results[0].geometry.location
                 });
-            } else {
-                alert("Geocode was not successful for the following reason: " + status);
-            }
-        });
-        
-        this.geocoder.geocode({ "address": "laval,québec" }, function (results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: results[0].geometry.location,
-                    animation: google.maps.Animation.DROP
-                });
-            } else {
-                alert("Geocode was not successful for the following reason: " + status);
+                marker.setMap(map);
             }
         });
         
