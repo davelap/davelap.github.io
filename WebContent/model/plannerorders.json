@@ -1,0 +1,46 @@
+{
+	"PlannerOrdersCollection": [
+		{
+		   "OrderNumber": "1",
+		   "Material": "Product1",
+		   "Plant": "0101",
+		   "Components": 
+		   [
+        		{
+        		   "InternalItemNo": "1",
+        		   "Component": "Component1",
+        		   "BaseQuantity": 10,
+        		   "BaseQuantityUOM": "EA",
+        		   "ComponentQuantity": 10,
+        		   "ComponentQuantityUOM": "EA",
+        		   "Operation": "0010"
+        		},
+            	{
+        		   "InternalItemNo": "1",
+        		   "Component": "Component2",
+        		   "BaseQuantity": 20,
+        		   "BaseQuantityUOM": "EA",
+        		   "ComponentQuantity": 20,
+        		   "ComponentQuantityUOM": "EA"
+        		}
+        	],
+		   "Operations": 
+		   [
+        		{
+                    "InternalItem": 1,
+                    "ItemNo":"0100",
+                    "IsPhase":false,
+                    "ParentOperation":0,
+                    "Description":"Operation 100"
+        		},
+            	{
+                    "InternalItem": 2,
+                    "ItemNo":"0110",
+                    "IsPhase":true,
+                    "ParentOperation":1,
+                    "Description":"Phase 110"
+        		}
+        	]
+		}
+	]
+}

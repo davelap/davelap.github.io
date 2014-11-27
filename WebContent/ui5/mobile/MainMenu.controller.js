@@ -1,12 +1,11 @@
 sap.ui.controller("ui5.mobile.MainMenu", {
-
 /**
 * Called when a controller is instantiated and its View controls (if available) are already created.
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf ui5.MainMenu
 */
 	onInit: function() {
-	    
+
 	},
 
 /**
@@ -65,6 +64,10 @@ sap.ui.controller("ui5.mobile.MainMenu", {
 	
 	OpenSalesOrderList: function() {
 		oApp.to("idViewSalesOrderList");
+	},
+	
+	OpenPlanneOrder: function() {
+	    oApp.to("idViewPlannedOrder");
 	},
 	
 	OpenODataTest: function(){
