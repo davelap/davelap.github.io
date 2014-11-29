@@ -16,10 +16,6 @@
 		<servlet-name>ResourceServlet</servlet-name>
 		<servlet-class>com.sap.ui5.resource.ResourceServlet</servlet-class>
 	</servlet>
-	<servlet-mapping>
-		<servlet-name>ResourceServlet</servlet-name>
-		<url-pattern>/resources/*</url-pattern>
-	</servlet-mapping>
 	<!-- BEGIN: test-resources -->
 	<!-- test-resources mapping has to be switched off for productive use on a Java server! -->
 	<servlet-mapping>
@@ -34,7 +30,11 @@
 		<param-name>com.sap.ui5.resource.DEV_MODE</param-name>
 		<param-value>false</param-value>
 	</context-param>
+
 	<!-- END: DEV MODE -->
+
+
+
 
 
 	<!-- ============================================================== -->
@@ -80,6 +80,15 @@
 		<servlet-name>SimpleProxyServlet</servlet-name>
 		<url-pattern>/proxy/*</url-pattern>
 	</servlet-mapping>
+	<context-param>
+        <param-name>com.sap.ui5.proxy.REMOTE_LOCATION</param-name>
+        <param-value>http://services.odata.org/</param-value>
+    </context-param>
+  
+
+ 
+
+	
 
 
 	<!-- ============================================================== -->

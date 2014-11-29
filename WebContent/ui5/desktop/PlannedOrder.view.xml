@@ -23,15 +23,15 @@
     
     <Panel text="Items">
         <content>
-            <table:Table width="100%"  rows="{Components}">
+            <table:Table width="100%" rows="{Components}">
         		<table:Column >
-        			<Label text="Item No"/>
+        			<Label text="{i18n>ItemNo}"/>
         			<table:template>
         				<TextField editable="false" value="{InternalItemNo}"/>
         			</table:template>
         		</table:Column>
         		<table:Column>
-        			<Label text="Component"/>
+        			<Label text="{i18n>Component}"/>
         			<table:template>
         				<TextField value="{Component}"/>
         			</table:template>

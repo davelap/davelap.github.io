@@ -66,7 +66,7 @@ sap.ui.controller("ui5.mobile.MainMenu", {
 		oApp.to("idViewSalesOrderList");
 	},
 	
-	OpenPlanneOrder: function() {
+	OpenPlannedOrder: function() {
 	    oApp.to("idViewPlannedOrder");
 	},
 	

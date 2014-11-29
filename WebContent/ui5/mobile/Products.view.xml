@@ -5,6 +5,12 @@
 			xmlns="sap.m"
 			controllerName="ui5.mobile.Products" 
 			xmlns:html="http://www.w3.org/1999/xhtml">
+		
+	<Label xmlns="sap.m" text="Label"/>
+	
+	<Text xmlns="sap.m"	text="{/Name}"/>
+	<Text xmlns="sap.m"	text="{Name}"/>
+			
   <!--  <Table xmlns="sap.m" items="{/Products}">-->
 <!--	<items>-->
   <!--        <ColumnListItem>-->

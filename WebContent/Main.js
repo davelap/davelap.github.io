@@ -75,6 +75,8 @@ function initApplicationMobile(){
 	var viewDesktopCarList 			= sap.ui.view({id:"idPageCarDesktopList", viewName:"ui5.desktop.CarList", type:sap.ui.core.mvc.ViewType.XML});
 	var viewDesktopCarListCarousel 	= sap.ui.view({id:"idPageCarListDesktopCarousel", viewName:"ui5.desktop.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
 	var viewSalesOrder 				= sap.ui.view({id:"idViewSalesOrder", viewName:"ui5.desktop.SalesOrder", type:sap.ui.core.mvc.ViewType.XML});	
+	var viewSalesOrderList   		= sap.ui.view({id:"idViewSalesOrderList", viewName:"ui5.desktop.SalesOrderList", type:sap.ui.core.mvc.ViewType.XML});	
+	var viewPlannedOrder            = sap.ui.view({id:"idViewPlannedOrder", viewName:"ui5.desktop.PlannedOrder", type:sap.ui.core.mvc.ViewType.XML});
 	var viewMaterialsList           = sap.ui.view({id:"idViewMaterialsList", viewName:"ui5.desktop.MaterialsList", type:sap.ui.core.mvc.ViewType.XML});
     
 	//Add Mobile Views
@@ -89,6 +91,8 @@ function initApplicationMobile(){
 	oApp.addPage(viewDesktopCarList);
 	oApp.addPage(viewDesktopCarListCarousel);
 	oApp.addPage(viewSalesOrder);
+	oApp.addPage(viewSalesOrderList);
+	oApp.addPage(viewPlannedOrder);
 	oApp.addPage(viewMaterialsList);
     
     var oHomeHeadItem = new sap.ui.unified.ShellHeadItem("shellHome", {icon:"sap-icon://home", tooltip:"Home",
