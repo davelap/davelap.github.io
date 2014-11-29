@@ -1,11 +1,25 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
-	controllerName="root.view.App" displayBlock="true" height="100%">
-	<SplitApp id="fioriContent" showHeader="false" mode="StretchCompressMode">
-		<masterPages>
-			 
-		</masterPages>
-		<detailPages>
-			 
-		</detailPages>
-	</SplitApp>
+<mvc:View xmlns:core="sap.ui.core" 
+            xmlns="sap.m" 
+            xmlns:mvc="sap.ui.core.mvc"
+            xmlns:unified="sap.ui.unified"
+	        controllerName="root.view.App" 
+	        displayBlock="true" 
+	        height="100%">
+	<unified:Shell>
+			<unified:content>
+			    <App xmlns="sap.m"	id="myApp"/>
+			</unified:content>
+			<unified:paneContent></unified:paneContent>
+			<unified:curtainContent></unified:curtainContent>
+			<unified:curtainPaneContent></unified:curtainPaneContent>
+			<unified:headItems>
+			    
+			</unified:headItems>
+			<unified:headEndItems>
+			    <unified:ShellHeadItem id="ShellHome" icon="sap-icon://home"  tooltip="Home" press="ToMainMenu"/>
+			    <unified:ShellHeadItem id="ShellLogOff" icon="sap-icon://log" tooltip="Log Off" press="LogOff"/>
+			</unified:headEndItems>
+			<unified:search></unified:search>
+			<unified:user></unified:user>
+	</unified:Shell>
 </mvc:View>

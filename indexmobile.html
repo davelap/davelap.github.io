@@ -5,7 +5,7 @@
 		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
 
 		<script id="sap-ui-bootstrap"
-			src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+			src="resources/sap-ui-core.js"
 			data-sap-ui-theme="sap_bluecrystal"
 			data-sap-ui-libs="sap.m,sap.ui.commons,sap.ui.table,sap.ui.layout"
 			data-sap-ui-xx-bindingSyntax="complex"
@@ -24,11 +24,13 @@
         </style>
 		<script>
 			//sap.ui.localResources("ui5");
-			sap.ui.localResources("view");
-			sap.ui.localResources("view.mobile");
+			jQuery.sap.registerModulePath("mobile", "./view/mobile");
+			jQuery.sap.registerModulePath("view", "./view");
+			jQuery.sap.registerModulePath("desktop", "./view/desktop");
+			//sap.ui.localResources("view");
 			//sap.ui.localResources("i18n");
 			//sap.ui.localResources("libs");
-			initApplicationMobile(); 
+			//initApplicationMobile(); 
 		</script>
 		<script>
 			sap.ui.getCore().attachInitEvent(function() {

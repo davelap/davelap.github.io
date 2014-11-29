@@ -6,9 +6,9 @@ sap.ui.controller("view.mobile.Products", {
 * @memberOf ui5.MainMenu
 */
 	onInit: function() {
-	   var sURI= "https://services.odata.org/OData/OData.svc/Categories";
-       var oModel = new sap.ui.model.odata.ODataModel(sURI,true);
-       sap.ui.getCore().setModel(oModel);
+	   //var sURI= "https://services.odata.org/OData/OData.svc/Categories";
+       //var oModel = new sap.ui.model.odata.ODataModel(sURI,true);
+       //sap.ui.getCore().setModel(oModel);
        //this.getView().bindElement(oModel);
 	}
 

@@ -3,7 +3,7 @@
 <mvc:View xmlns:core="sap.ui.core" 
 			xmlns:mvc="sap.ui.core.mvc" 
 			xmlns="sap.m"
-			controllerName="view.mobile.MainMenu" 
+			controllerName="mobile.MainMenu" 
 			xmlns:html="http://www.w3.org/1999/xhtml">
 		
 		

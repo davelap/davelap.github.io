@@ -24,7 +24,7 @@ sap.ui.core.UIComponent.extend("root.Component", {
 		routing: {
 			config: {
 				viewType : "XML",
-				viewPath: "root.view.mobile",  // common prefix
+				viewPath: "root.view",  // common prefix
 				targetAggregation: "detailPages",
 				clearTarget: false
 			},
@@ -32,16 +32,16 @@ sap.ui.core.UIComponent.extend("root.Component", {
 				[{
 					pattern: "",
 					name : "master",
-					view : "MainMenu",
+					view : "mobile.MainMenu",
 					targetAggregation : "masterPages",
-					preservePageInSplitContainer : true,
-					targetControl: "fioriContent",
-					subroutes : [
-									{
-										pattern : "Detail/{contextPath}", // will be the url and from has to be provided in the data
-										view : "MainMenu",
-										name : "Detail" // name used for listening or navigating to this route
-									}]
+					preservePageInSplitContainer : true
+				// 	targetControl: "fioriContent",
+				// 	subroutes : [
+				// 					{
+				// 						pattern : "Detail/{contextPath}", // will be the url and from has to be provided in the data
+				// 						view : "MainMenu",
+				// 						name : "Detail" // name used for listening or navigating to this route
+				// 					}]
 				}]
 		}
 	},

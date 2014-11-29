@@ -1,11 +1,13 @@
-sap.ui.controller("view.mobile.MainMenu", {
+var oApp;
+sap.ui.controller("mobile.MainMenu", {
+
 /**
 * Called when a controller is instantiated and its View controls (if available) are already created.
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf ui5.MainMenu
 */
 	onInit: function() {
-
+        oApp = oGlobalApp;
 	},
 
 /**
@@ -35,6 +37,7 @@ sap.ui.controller("view.mobile.MainMenu", {
 //	}
 	
 	OpenCarList: function() {
+	    
 		oApp.to("idPageCarDetail");
 	},
 	
