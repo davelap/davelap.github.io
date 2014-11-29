@@ -1,0 +1,18 @@
+[{
+	"SalesOrderNumber": "1",
+	"TotalAmount": 20,
+	"Currency": "CAD",
+	"CustomerID": "CLIENT1",
+	"CustomerName": "Client 1",
+	"NetPriceAmount": 17,
+	"TaxAmount": 3,
+	"OrderDate": "2014/10/10",
+	"RequestedDate": "2014/11/11",
+	"Status": "On Going",
+	"SalesOrganization": "0100",
+	"SalesOrganizationName": "Bar Sur Loup",
+	"DistributionChannel": "01",
+	"Division": "01",
+	"DistributionChannelName": "Direct",
+	"DivisionName": "01-Name"
+}]

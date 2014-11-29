@@ -1,27 +1,25 @@
-<!DOCTYPE html>
-<html><head>
-<meta http-equiv='X-UA-Compatible' content='IE=edge' />
-<title>Hello World</title>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
 
-<script id='sap-ui-bootstrap'
-    src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'  
-    data-sap-ui-theme='sap_bluecrystal'  
-    data-sap-ui-libs='sap.ui.commons'>
-</script>   
-  
+		
+		<script id='sap-ui-bootstrap'
+			src='https://sapui5.hana.ondemand.com/resources/sap-ui-core.js'
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-libs="sap.m,sap.ui.commons,sap.ui.table,sap.ui.layout"
+			data-sap-ui-xx-bindingSyntax="complex">
+		</script> 
+		
+		<script src="Main.js"></script>
 
-<script>
-    var btn = new sap.ui.commons.Button({
-        text:'Appuies sur moi!',
-        press: function() {
-            alert("Je t'aime!")
-        }
-    });
-    btn.placeAt('content');
-</script>
-
-</head>
-<body class='sapUiBody'>
-    <div id='content'></div>
-</body>
+		<script>
+			sap.ui.localResources("ui5");
+			sap.ui.localResources("i18n");
+			initApplication(); 
+		</script>
+	</head>
+	<body class="sapUiBody" id="body" role="application">
+	</body>
 </html>

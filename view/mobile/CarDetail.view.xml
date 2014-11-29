@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<core:View  xmlns:core="sap.ui.core" 
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns="sap.m"
+			xmlns:f="sap.ui.layout.form"
+			controllerName="view.mobile.CarDetail" 
+			xmlns:html="http://www.w3.org/1999/xhtml">
+			
+			
+	<Page navButtonType="Back" id="idPageCarDetail" title="Car Detail" showFooter="true">
+	    <headerContent>
+	     	<Button xmlns="sap.m" type="Back" press="BackMainMenu"/>
+        </headerContent>
+		<content>
+ 			<f:SimpleForm id="carDetailSF" maxContainerCols="3">
+ 				<f:content>
+ 				
+ 					<Label text="Maker" />
+ 	          		<ComboBox id="idTestCombo" xmlns="sap.m" value="{/modelData/maker}" items="{/makers/makers}">
+ 	          			<ListItem xmlns="sap.ui.core" text="{name}"/>
+ 	          		</ComboBox>
+
+ 					<Label text="Model" />
+ 	          		<Input id="idtxtModel" value="{/modelData/model}" />
+ 	          		
+ 					<Label text="Year" />
+ 	          		<ComboBox xmlns="sap.m" value="{/modelData/year}">
+						<items>
+							<Item xmlns="sap.ui.core" text="1967"/>
+							<Item xmlns="sap.ui.core" text="1968"/>
+							<Item xmlns="sap.ui.core" text="1969"/>
+							<Item xmlns="sap.ui.core" text="1970"/>
+						</items>
+					</ComboBox>
+					
+
+ 	          	</f:content>
+			</f:SimpleForm>
+		</content>
+	</Page>
+</core:View>
