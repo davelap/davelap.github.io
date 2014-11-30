@@ -6,6 +6,24 @@ sap.ui.controller("view.desktop.PlannedOrder", {
 * @memberOf ui5.desktop.SalesOrder
 */
 	onInit: function() { 
+        // var oModel = new sap.ui.model.json.JSONModel("model/plannedorders.json");
+        // this.getView().setModel(oModel);
+        // this.getView().bindElement("/PlannerOrdersCollection/0");
+        
+        // // set i18n model
+        // var i18nModel = new sap.ui.model.resource.ResourceModel({
+        // bundleUrl : "i18n/production.properties"
+        // });
+        // this.getView().setModel(i18nModel, "i18n");
+
+	},
+
+/**
+* Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
+* (NOT before the first rendering! onInit() is used for that one!).
+* @memberOf ui5.desktop.SalesOrder
+*/
+	onBeforeRendering: function() {
         var oModel = new sap.ui.model.json.JSONModel("model/plannedorders.json");
         this.getView().setModel(oModel);
         this.getView().bindElement("/PlannerOrdersCollection/0");
@@ -15,17 +33,7 @@ sap.ui.controller("view.desktop.PlannedOrder", {
         bundleUrl : "i18n/production.properties"
         });
         this.getView().setModel(i18nModel, "i18n");
-
 	}
-
-/**
-* Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
-* (NOT before the first rendering! onInit() is used for that one!).
-* @memberOf ui5.desktop.SalesOrder
-*/
-//	onBeforeRendering: function() {
-//
-//	},
 
 /**
 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.

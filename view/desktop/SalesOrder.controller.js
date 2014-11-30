@@ -6,6 +6,15 @@ sap.ui.controller("view.desktop.SalesOrder", {
 * @memberOf ui5.desktop.SalesOrder
 */
 	onInit: function() {
+
+	},
+
+/**
+* Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
+* (NOT before the first rendering! onInit() is used for that one!).
+* @memberOf ui5.desktop.SalesOrder
+*/
+	onBeforeRendering: function() {
         var oModel = new sap.ui.model.json.JSONModel("model/salesorder.json");
         this.getView().setModel(oModel);
         this.getView().bindElement("/SalesOrderCollection/0");
@@ -15,17 +24,7 @@ sap.ui.controller("view.desktop.SalesOrder", {
         bundleUrl : "i18n/sales.properties"
         });
         this.getView().setModel(i18nModel, "i18n");
-
 	}
-
-/**
-* Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
-* (NOT before the first rendering! onInit() is used for that one!).
-* @memberOf ui5.desktop.SalesOrder
-*/
-//	onBeforeRendering: function() {
-//
-//	},
 
 /**
 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.

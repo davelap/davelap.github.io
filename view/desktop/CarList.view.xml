@@ -34,7 +34,7 @@
 						</template>
 					</Column>
 				</columns>
-				<noData></noData> <!-- sap.ui.core.Control -->
+				<noData></noData>
 			</Table>
 		</m:content>
 	</m:Page>

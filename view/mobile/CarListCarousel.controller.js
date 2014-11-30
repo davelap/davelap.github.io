@@ -34,7 +34,4 @@ sap.ui.controller("view.mobile.CarListCarousel", {
 //	onExit: function() {
 //
 //	}
-	BackMainMenu: function() {
-		app.to("idMainMenu");
-	}
 });

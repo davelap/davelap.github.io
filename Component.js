@@ -71,7 +71,7 @@ sap.ui.core.UIComponent.extend("root.Component", {
 		// start mock server if required
 		var responderOn = jQuery.sap.getUriParameters().get("responderOn");
 		var bUseMockData = (responderOn === "true");
-		//var bUseMockData = true;
+		bUseMockData = true;
 		if (bUseMockData) {
 			jQuery.sap.require("sap.ui.core.util.MockServer");
 			var oMockServer = new sap.ui.core.util.MockServer({

@@ -6,7 +6,6 @@ sap.ui.controller("view.mobile.CarList", {
 * @memberOf ui5.CarList
 */
 	onInit: function() {
-		
 		var oModel = new sap.ui.model.json.JSONModel();
 		
 		var oDataCarListing = {
@@ -16,10 +15,10 @@ sap.ui.controller("view.mobile.CarList", {
 					  {maker: "Ford",  model:"Mustang",year:1968, rating: 4 },
 					  {maker: "Dodge", model:"Viper",  year:2000, rating: 3 }
 					]
-			  };
+ 			  };
 		
-		oModel.setData({cars : oDataCarListing});
-		this.getView().setModel(oModel);
+ 		oModel.setData({cars : oDataCarListing});
+ 		this.getView().setModel(oModel);
 	},
 
 /**
@@ -27,9 +26,9 @@ sap.ui.controller("view.mobile.CarList", {
 * (NOT before the first rendering! onInit() is used for that one!).
 * @memberOf ui5.CarList
 */
-//	onBeforeRendering: function() {
-//
-//	},
+	onBeforeRendering: function() {
+
+	}
 
 /**
 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
@@ -47,7 +46,4 @@ sap.ui.controller("view.mobile.CarList", {
 //	onExit: function() {
 //
 //	}
-	BackMainMenu: function() {
-		app.to("idMainMenu");
-	}
 });

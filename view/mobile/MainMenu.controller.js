@@ -38,7 +38,7 @@ sap.ui.controller("mobile.MainMenu", {
 	
 	OpenCarList: function() {
 	    
-		oApp.to("idPageCarDetail");
+		oApp.to("idPageCarList");
 	},
 	
 	OpenCarDetail: function() {
