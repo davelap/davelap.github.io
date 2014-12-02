@@ -9,24 +9,7 @@ sap.ui.controller("view.desktop.PlannedOrder", {
 	    //var oModel = new sap.ui.model.odata.ODataModel("model/PlannedOrders(1)");
         //this.getView().setModel(oModel);
          
-        var oModel2 = new sap.ui.model.json.JSONModel();
-        oModel2.setSizeLimit(15);
-        $.getJSON("http://services.odata.org/V3/Northwind/Northwind.svc/Categories?$format=json",                   function(result){
-                  var data = result.value;
-                  oModel2.setData(data);
-                  console.log(result.value);
-             });
-        
-        
-        
-        
-    	//var sURI= "http://services.odata.org/Northwind/Northwind.svc";
-    	//var oModel = new sap.ui.model.odata.ODataModel(sURI, true);
-        //this.getView().setModel(oModel2);
-        //var oTable = sap.ui.getCore().byId("mytable");
-        var oTable = this.getView().byId("mytable");
-        oTable.setModel(oModel2);
-        oTable.bindRows("/");
+
         
         //var oTable = sap.ui.getCore().byId("table");
         //oTable.setModel(oModel);
@@ -55,6 +38,26 @@ sap.ui.controller("view.desktop.PlannedOrder", {
 * @memberOf ui5.desktop.SalesOrder
 */
 	onBeforeRendering: function() {
+	    
+        var oModel2 = new sap.ui.model.json.JSONModel();
+        oModel2.setSizeLimit(15);
+        $.getJSON("http://services.odata.org/V3/Northwind/Northwind.svc/Categories?$format=json",                   function(result){
+                  var data = result.value;
+                  oModel2.setData(data);
+                  console.log(result.value);
+             });
+        
+        
+        
+        
+    	//var sURI= "http://services.odata.org/Northwind/Northwind.svc";
+    	//var oModel = new sap.ui.model.odata.ODataModel(sURI, true);
+        //this.getView().setModel(oModel2);
+        //var oTable = sap.ui.getCore().byId("mytable");
+        var oTable = this.getView().byId("mytable");
+        oTable.setModel(oModel2);
+        oTable.bindRows("/");
+	    
 	    
         // var oModel = new sap.ui.model.json.JSONModel("model/plannedorders.json");
         // this.getView().setModel(oModel);
