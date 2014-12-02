@@ -21,7 +21,7 @@
     <!--	</tabs>-->
     <!--</TabStrip>-->
     
-    <table:Table width="100%"  rows="{/}">
+    <table:Table width="100%"  rows="{/Categories}">
 		<table:Column sortProperty="CategoryID" filterProperty="CategoryID">
 			<Label text="{i18n>CategoryID}"/>
 			<table:template >
