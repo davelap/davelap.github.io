@@ -8,7 +8,7 @@ sap.ui.controller("view.desktop.PlannedOrder", {
 	onInit: function() {   
 	    //var oModel = new sap.ui.model.odata.ODataModel("model/PlannedOrders(1)");
         //this.getView().setModel(oModel);
-        
+         
         
     	var sURI= "http://services.odata.org/Northwind/Northwind.svc/Categories";
     	var oModel = new sap.ui.model.odata.ODataModel(sURI, true);

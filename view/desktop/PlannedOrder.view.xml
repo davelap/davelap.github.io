@@ -5,7 +5,7 @@
     xmlns:table="sap.ui.table"
     xmlns:sap.ui.core="sap.ui.core" 
     xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
-
+ 
     <!--<TabStrip width="100%">-->
     <!--	<tabs>-->
     <!--	    <Tab text="General Data">-->
