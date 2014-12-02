@@ -9,6 +9,16 @@ sap.ui.controller("view.desktop.PlannedOrder", {
 	    //var oModel = new sap.ui.model.odata.ODataModel("model/PlannedOrders(1)");
         //this.getView().setModel(oModel);
          
+        var oModel2 = new sap.ui.model.json.JSONModel();
+        oModel2.setSizeLimit(15);
+        $.getJSON("http://services.odata.org/V3/Northwind/Northwind.svc/Orders?$format=json",                   function(result){
+                  var data = result.value;
+                  oModel2.setData(data);
+                  console.log(result.value);
+             });
+        
+        
+        
         
     	var sURI= "http://services.odata.org/Northwind/Northwind.svc";
     	var oModel = new sap.ui.model.odata.ODataModel(sURI, true);
