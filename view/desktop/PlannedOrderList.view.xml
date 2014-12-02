@@ -1,0 +1,44 @@
+<mvc:View controllerName="view.desktop.PlannedOrderList"
+    xmlns="sap.m"
+    xmlns:commons="sap.ui.commons"
+    xmlns:table="sap.ui.table"
+    xmlns:sap.ui.core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" >
+
+    <Page xmlns="sap.m">
+		<content>
+            <table:Table width="100%"  rows="{/PlannedOrders}">
+        		<table:Column sortProperty="PlannedOrderNo" filterProperty="PlannedOrderNo">
+        			<commons:Label  text="{i18n>PlannedOrderNo}"/>
+        			<table:template >
+        				<commons:TextField editable="false" value="{PlannedOrderNo}"/>
+        			</table:template>
+        		</table:Column>
+        		<table:Column sortProperty="MaterialNo" filterProperty="MaterialNo">
+        			<commons:Label  text="{i18n>MaterialNo}"/>
+        			<table:template >
+        				<commons:TextField editable="false" value="{MaterialNo}"/>
+        			</table:template>
+        		</table:Column>
+        		<table:Column sortProperty="PlantNo" filterProperty="PlantNo">
+        			<commons:Label  text="{i18n>PlantNo}"/>
+        			<table:template >
+        				<commons:TextField editable="false" value="{PlantNo}"/>
+        			</table:template>
+        		</table:Column>
+        		<table:Column sortProperty="Quantity" filterProperty="Quantity">
+        			<commons:Label  text="{i18n>Quantity}"/>
+        			<table:template >
+        				<commons:TextField editable="false" value="{Quantity}"/>
+        			</table:template>
+        		</table:Column>
+        		<table:Column sortProperty="QuantityUOM" filterProperty="QuantityUOM">
+        			<commons:Label  text="{i18n>QuantityUOM}"/>
+        			<table:template >
+        				<commons:TextField editable="false" value="{QuantityUOM}"/>
+        			</table:template>
+        		</table:Column>
+        	</table:Table>
+		</content> <!-- sap.ui.core.Control -->
+    </Page>
+</mvc:View>

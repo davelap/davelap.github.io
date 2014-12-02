@@ -6,7 +6,24 @@ sap.ui.controller("view.mobile.CarDetail", {
 * @memberOf ui5.CarDetail
 */
 	onInit: function() {
+		var oData = {
+						maker: "Ford",
+						model: "Mustang",
+						year: "1967"
+					};
 
+		var oDataMakers = {
+							"makers": 
+								[
+								  {"name":"Ford"},
+								  {"name":"Dodge"}
+								]
+						  };
+		
+		var oModel = new sap.ui.model.json.JSONModel();
+		oModel.setData({modelData : oData,
+						makers:     oDataMakers});
+        this.getView().setModel(oModel);
 	},
 
 /**
@@ -15,24 +32,7 @@ sap.ui.controller("view.mobile.CarDetail", {
 * @memberOf ui5.CarDetail
 */
 	onBeforeRendering: function() {
-// 		var oData = {
-// 						maker: "Ford",
-// 						model: "Mustang",
-// 						year: "1967"
-// 					};
 
-// 		var oDataMakers = {
-// 							"makers": 
-// 								[
-// 								  {"name":"Ford"},
-// 								  {"name":"Dodge"}
-// 								]
-// 						  };
-		
-// 		var oModel = new sap.ui.model.json.JSONModel();
-// 		oModel.setData({modelData : oData,
-// 						makers:     oDataMakers});
-//         this.getView().setModel(oModel);
         
 		//var oModelMakers = new sap.ui.model.json.JSONModel();
 		//oModelMakers.loadData("model/Maker.json");

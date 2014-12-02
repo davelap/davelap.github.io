@@ -11,6 +11,7 @@
       	<tiles>
       	    <StandardTile xmlns="sap.m" icon="sap-icon://sales-order" 	 title="Sales Order" 			info="Desktop" 					press="OpenSalesOrder" />
       	    <StandardTile xmlns="sap.m" icon="sap-icon://sales-order" 	 title="Planner Order" 			info="Desktop" 					press="OpenPlannedOrder" />
+      	    <StandardTile xmlns="sap.m" icon="sap-icon://list" 	         title="Planner Order List" 	info="Desktop" 					press="OpenPlannedOrderList" />
       	    <StandardTile xmlns="sap.m" icon="sap-icon://list" 	         title="Sales Order List" 		info="Desktop" 					press="OpenSalesOrderList" />
       	    <StandardTile xmlns="sap.m" icon="sap-icon://list" 	         title="Materials List" 		info="Desktop" 					press="OpenMaterialsList" />
       		<StandardTile xmlns="sap.m" icon="sap-icon://list" 			 title="Car Listing" 			info="List of cars" 			press="OpenCarList" />

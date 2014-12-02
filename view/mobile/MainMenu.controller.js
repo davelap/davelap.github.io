@@ -49,6 +49,8 @@ sap.ui.controller("mobile.MainMenu", {
 		oApp.to("idPageCarListCarousel");
 	},
 	
+	
+	
 	OpenDesktopCarList: function() {
 		oApp.to("idPageCarDesktopList");
 	},
@@ -71,6 +73,10 @@ sap.ui.controller("mobile.MainMenu", {
 	
 	OpenPlannedOrder: function() {
 	    oApp.to("idViewPlannedOrder");
+	},
+	
+	OpenPlannedOrderList: function () {
+		oApp.to("idViewPlannedOrderList");
 	},
 	
 	OpenODataTest: function(){

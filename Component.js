@@ -25,7 +25,7 @@ sap.ui.core.UIComponent.extend("root.Component", {
 			config: {
 				viewType : "XML",
 				viewPath: "root.view",  // common prefix
-				targetAggregation: "detailPages",
+				//targetAggregation: "detailPages",
 				clearTarget: false
 			},
 			routes:
@@ -78,7 +78,6 @@ sap.ui.core.UIComponent.extend("root.Component", {
 				rootUri: sServiceUrl.replace(/\/?$/, "/")
 			});
 			oMockServer.simulate(rootPath + "/model/metadata.xml", rootPath + "/model/");
-			oMockServer.start();
 
 			var msg = "Running in demo mode with mock data."; // not translated because only for development scenario
 			jQuery.sap.require("sap.m.MessageToast");
