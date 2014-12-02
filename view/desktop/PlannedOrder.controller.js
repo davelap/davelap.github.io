@@ -10,7 +10,7 @@ sap.ui.controller("view.desktop.PlannedOrder", {
         //this.getView().setModel(oModel);
         
         
-    	var sURI= "http://services.odata.org/Northwind/Northwind.svc/Categories(1)";
+    	var sURI= "proxy/http/services.odata.org/Northwind/Northwind.svc/Categories(1)";
     	var oModel = new sap.ui.model.odata.ODataModel(sURI, true);
         this.getView().setModel(oModel);
         
