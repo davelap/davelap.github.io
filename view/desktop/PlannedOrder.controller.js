@@ -10,10 +10,11 @@ sap.ui.controller("view.desktop.PlannedOrder", {
         //this.getView().setModel(oModel);
          
         
-    	var sURI= "http://services.odata.org/Northwind/Northwind.svc/Categories";
+    	var sURI= "http://services.odata.org/Northwind/Northwind.svc";
     	var oModel = new sap.ui.model.odata.ODataModel(sURI, true);
         this.getView().setModel(oModel);
-        var oTable = sap.ui.getCore().byId("table");
+        var oTable = sap.ui.getCore().byId("mytable");
+        oTable.bindRows("/Categories");
         
         //var oTable = sap.ui.getCore().byId("table");
         //oTable.setModel(oModel);
