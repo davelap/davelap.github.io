@@ -22,8 +22,8 @@
     <!--</TabStrip>-->
     
     <table:Table id="mytable" width="100%">
-		<table:Column sortProperty="CategoryID" filterProperty="CategoryID">
-			<Label text="{i18n>CategoryID}"/>
+		<table:Column>
+			<Label text="Category"/>
 			<table:template >
 				<TextField editable="false" value="{CategoryID}"/>
 			</table:template>
