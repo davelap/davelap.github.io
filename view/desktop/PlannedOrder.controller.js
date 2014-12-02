@@ -11,7 +11,7 @@ sap.ui.controller("view.desktop.PlannedOrder", {
          
         var oModel2 = new sap.ui.model.json.JSONModel();
         oModel2.setSizeLimit(15);
-        $.getJSON("http://services.odata.org/V3/Northwind/Northwind.svc/Orders?$format=json",                   function(result){
+        $.getJSON("http://services.odata.org/V3/Northwind/Northwind.svc/Categories?$format=json",                   function(result){
                   var data = result.value;
                   oModel2.setData(data);
                   console.log(result.value);
@@ -20,12 +20,12 @@ sap.ui.controller("view.desktop.PlannedOrder", {
         
         
         
-    	var sURI= "http://services.odata.org/Northwind/Northwind.svc";
-    	var oModel = new sap.ui.model.odata.ODataModel(sURI, true);
-        this.getView().setModel(oModel);
+    	//var sURI= "http://services.odata.org/Northwind/Northwind.svc";
+    	//var oModel = new sap.ui.model.odata.ODataModel(sURI, true);
+        this.getView().setModel(oModel2);
         //var oTable = sap.ui.getCore().byId("mytable");
         var oTable = this.getView().byId("mytable");
-        oTable.bindRows("/Categories");
+        oTable.bindRows("/");
         
         //var oTable = sap.ui.getCore().byId("table");
         //oTable.setModel(oModel);
