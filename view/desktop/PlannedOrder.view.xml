@@ -21,22 +21,22 @@
     	</tabs>
     </TabStrip>
     
-    <Panel text="Items">
-        <content>
-            <m:Table>
-        		<m:items>
-                  <m:ColumnListItem>  
-                    <m:cells>  
-                      <m:ObjectIdentifier   text="{PlannedOrderNo}" />  
-                    </m:cells>  
-                  </m:ColumnListItem>  
-        		</m:items> <!-- sap.m.ListItemBase -->
-        		<m:columns>
-        		  <m:Column   width="12em">  
-                    <m:Label text="Product" />  
-                  </m:Column>  
-        		</m:columns> <!-- sap.m.Column -->
-            </m:Table>
-        </content>
-    </Panel>
+    <!--<Panel text="Items">-->
+    <!--    <content>-->
+    <!--        <m:Table>-->
+    <!--    		<m:items>-->
+    <!--              <m:ColumnListItem>  -->
+    <!--                <m:cells>  -->
+    <!--                  <m:ObjectIdentifier   text="{PlannedOrderNo}" />  -->
+    <!--                </m:cells>  -->
+    <!--              </m:ColumnListItem>  -->
+    <!--    		</m:items>-->
+    <!--    		<m:columns>-->
+    <!--    		  <m:Column   width="12em">  -->
+    <!--                <m:Label text="Product" />  -->
+    <!--              </m:Column>  -->
+    <!--    		</m:columns>-->
+    <!--        </m:Table>-->
+    <!--    </content>-->
+    <!--</Panel>-->
 </sap.ui.core.mvc:View>
