@@ -6,7 +6,7 @@ sap.ui.controller("view.desktop.PlannedOrderList", {
 * @memberOf ui5.desktop.SalesOrder
 */
 	onInit: function() {
-	    var sURI= "http://services.odata.org/V3/Northwind/Northwind.svc";
+	    var sURI= "http://services.odata.org/V3/Northwind/Northwind.svc/Categories";
 	    var oModel2 = new sap.ui.model.odata.ODataModel(sURI, true);
 
 	   // var oModel2 = new sap.ui.model.json.JSONModel();
@@ -18,7 +18,7 @@ sap.ui.controller("view.desktop.PlannedOrderList", {
     //           });
         var oTable = this.getView().byId("mytable");
         oTable.setModel(oModel2);
-        oTable.bindRows("/Categories");
+        oTable.bindRows("/");
 	},
 
 /**
