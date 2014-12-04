@@ -5,7 +5,7 @@
     xmlns:mvc="sap.ui.core.mvc" >
 
 
-    <table:Table width="100%"  rows="{/MaterialsCollection}">
+    <table:Table width="100%"  rows="{/Materials}">
 		<table:Column sortProperty="MaterialNo" filterProperty="MaterialNo">
 			<Label text="{i18n>MaterialNo}"/>
 			<table:template >
@@ -16,12 +16,6 @@
 			<Label text="{i18n>BaseUOM}"/>
 			<table:template>
 				<TextField editable="false" value="{BaseUOM}"/>
-			</table:template>
-		</table:Column>
-		<table:Column sortProperty="PlantData/0/PlantNo" filterProperty="PlantData/0/PlantNo">
-			<Label text="{i18n>PlantNo}"/>
-			<table:template>
-				<TextField editable="false" value="{PlantData/0/PlantNo}"/>
 			</table:template>
 		</table:Column>
 	</table:Table>

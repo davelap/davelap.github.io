@@ -45,7 +45,7 @@
                 <Property Name="Quantity"       Type="Edm.Decimal"  sap:label="Quantity"            Precision="16"      Scale="3" />
                 <Property Name="QuantityUOM"    Type="Edm.String"   sap:label="UOM"                 Nullable="false"    MaxLength="2" />
             
-                <NavigationProperty Name="Reservations" Relationship="oData.FK_PlannedOrder_Reservations" ToRole="PlannedOrder_Reservations" FromRole="PlannedOrder"/>
+                <!--<NavigationProperty Name="Reservations" Relationship="oData.FK_PlannedOrder_Reservations" ToRole="PlannedOrder_Reservations" FromRole="PlannedOrder"/>-->
             </EntityType>
             <EntityType Name="Reservation">
                 <Key>
@@ -55,27 +55,27 @@
                 <Property Name="PlannedOrderNo" Type="Edm.Int32"    sap:label="Planned Order No"    Nullable="false" />
                 <Property Name="InternalItem"   Type="Edm.Int32"    sap:label="Item"                Nullable="false" />
             </EntityType>
-            <Association Name="FK_PlannedOrder_Reservations">
-                <End Type="oData.PlannedOrder" Role="PlannedOrder"              Multiplicity="1"/>
-                <End Type="oData.Reservation"  Role="PlannedOrder_Reservations" Multiplicity="*"/>
-                <ReferentialConstraint>
-                    <Principal Role="PlannedOrder">
-                        <PropertyRef Name="PlannedOrderNo"/>
-                    </Principal>
-                    <Dependent Role="Reservation">
-                        <PropertyRef Name="PlannedOrderNo"/>
-                    </Dependent>
-                </ReferentialConstraint>
-            </Association>
+            <!--<Association Name="FK_PlannedOrder_Reservations">-->
+            <!--    <End Type="oData.PlannedOrder" Role="PlannedOrder"              Multiplicity="1"/>-->
+            <!--    <End Type="oData.Reservation"  Role="PlannedOrder_Reservations" Multiplicity="*"/>-->
+            <!--    <ReferentialConstraint>-->
+            <!--        <Principal Role="PlannedOrder">-->
+            <!--            <PropertyRef Name="PlannedOrderNo"/>-->
+            <!--        </Principal>-->
+            <!--        <Dependent Role="Reservation">-->
+            <!--            <PropertyRef Name="PlannedOrderNo"/>-->
+            <!--        </Dependent>-->
+            <!--    </ReferentialConstraint>-->
+            <!--</Association>-->
             <EntityContainer Name="oData_Entities" m:IsDefaultEntityContainer="false">
                 <EntitySet Name="SalesOrders"            EntityType="oData.SalesOrder"              sap:searchable="true" sap:requires-filter="true" />
                 <EntitySet Name="Materials"              EntityType="oData.Material"                sap:searchable="true" sap:requires-filter="true" />
                 <EntitySet Name="PlannedOrders"          EntityType="oData.PlannedOrder"            sap:searchable="true" sap:requires-filter="true" />
                 <EntitySet Name="Reservations"           EntityType="oData.Reservation"             sap:searchable="true" sap:requires-filter="true" />
-                <AssociationSet Name="FK_PlannedOrder_Reservations" Association="oData.FK_PlannedOrder_Reservations">
-                    <End Role="PlannedOrders"   EntitySet="PlannedOrders"/>
-                    <End Role="Reservations"    EntitySet="Reservations"/>
-                </AssociationSet>
+                <!--<AssociationSet Name="FK_PlannedOrder_Reservations" Association="oData.FK_PlannedOrder_Reservations">-->
+                <!--    <End Role="PlannedOrders"   EntitySet="PlannedOrders"/>-->
+                <!--    <End Role="Reservations"    EntitySet="Reservations"/>-->
+                <!--</AssociationSet>-->
             </EntityContainer>
         </Schema>
     </edmx:DataServices>

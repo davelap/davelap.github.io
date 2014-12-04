@@ -8,7 +8,7 @@
   ],
   "mockpreview": {
     "mockUri": "",
-    "loadJSONFiles": false
+    "loadJSONFiles": true
   },
   "translation": {
     "translationDomain": "",

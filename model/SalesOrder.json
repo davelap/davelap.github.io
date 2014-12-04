@@ -15,4 +15,8 @@
 	"Division": "01",
 	"DistributionChannelName": "Direct",
 	"DivisionName": "01-Name"
+}, {
+	"SalesOrderNumber": "2",
+	"TotalAmount": 30,
+	"Currency": "CAD"
 }]

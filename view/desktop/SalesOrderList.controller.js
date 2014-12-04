@@ -15,15 +15,15 @@ sap.ui.controller("view.desktop.SalesOrderList", {
 * @memberOf ui5.desktop.SalesOrder
 */
 	onBeforeRendering: function() {
-        var oModel = new sap.ui.model.json.JSONModel("model/salesorder.json");
-        this.getView().setModel(oModel);
-        this.getView().bindElement("/SalesOrderCollection");
+        // var oModel = new sap.ui.model.json.JSONModel("model/SalesOrder.json");
+        // this.getView().setModel(oModel);
+        // this.getView().bindElement("/SalesOrderCollection");
         
-        // set i18n model
-        var i18nModel = new sap.ui.model.resource.ResourceModel({
-        bundleUrl : "i18n/sales.properties"
-        });
-        this.getView().setModel(i18nModel, "i18n");
+        // // set i18n model
+        // var i18nModel = new sap.ui.model.resource.ResourceModel({
+        // bundleUrl : "i18n/sales.properties"
+        // });
+        // this.getView().setModel(i18nModel, "i18n");
 
 	}
 

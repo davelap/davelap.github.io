@@ -7,7 +7,7 @@ sap.ui.core.UIComponent.extend("root.Component", {
 		"version" : "1.0",
 		"includes" : [],
 		"dependencies" : {
-			"libs" : ["sap.m", "sap.me", "sap.ushell"],
+			"libs" : ["sap.m"],
 			"components" : []
 		},
 
@@ -71,13 +71,14 @@ sap.ui.core.UIComponent.extend("root.Component", {
 		// start mock server if required
 		var responderOn = jQuery.sap.getUriParameters().get("responderOn");
 		var bUseMockData = (responderOn === "true");
-		bUseMockData = true;
+		//bUseMockData = true;
 		if (bUseMockData) {
 			jQuery.sap.require("sap.ui.core.util.MockServer");
 			var oMockServer = new sap.ui.core.util.MockServer({
 				rootUri: sServiceUrl.replace(/\/?$/, "/")
 			});
 			oMockServer.simulate(rootPath + "/model/metadata.xml", rootPath + "/model/");
+			oMockServer.start();
 
 			var msg = "Running in demo mode with mock data."; // not translated because only for development scenario
 			jQuery.sap.require("sap.m.MessageToast");

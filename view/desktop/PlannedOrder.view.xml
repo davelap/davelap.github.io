@@ -6,29 +6,29 @@
     xmlns:sap.ui.core="sap.ui.core" 
     xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
  
-    <!--<TabStrip width="100%">-->
-    <!--	<tabs>-->
-    <!--	    <Tab text="General Data">-->
-	   <!-- 		<content>-->
-    <!--		        <layout:SimpleForm maxContainerCols="2" editable="true">-->
-    <!--                    <layout:content>-->
-    <!--	    		        <Label text="{i18n>PlannerOrderNo}"/>-->
-    <!--                        <TextField value="{CategoryID}"/>-->
-    <!--                    </layout:content>-->
-    <!--                </layout:SimpleForm>-->
-	   <!-- 		</content>-->
-    <!--	    </Tab>-->
-    <!--	</tabs>-->
-    <!--</TabStrip>-->
+    <TabStrip width="100%" >
+    	<tabs>
+    	    <Tab text="General Data">
+	    		<content>
+    		        <layout:SimpleForm maxContainerCols="2" editable="true">
+                        <layout:content>
+    	    		        <Label text="{i18n>CategoryID}"/>
+                            <TextField value="{CategoryID}"/>
+                        </layout:content>
+                    </layout:SimpleForm>
+	    		</content>
+    	    </Tab>
+    	</tabs>
+    </TabStrip>
     
-    <table:Table id="mytable" width="100%">
-		<table:Column>
-			<Label text="Category"/>
-			<table:template >
-				<TextField editable="false" value="{CategoryID}"/>
-			</table:template>
-		</table:Column>
-	</table:Table>
+ <!--   <table:Table id="mytable" width="100%">-->
+	<!--	<table:Column>-->
+	<!--		<Label text="Category"/>-->
+	<!--		<table:template >-->
+	<!--			<TextField editable="false" value="{CategoryID}"/>-->
+	<!--		</table:template>-->
+	<!--	</table:Column>-->
+	<!--</table:Table>-->
     
     
     <!--<Panel text="Items">-->

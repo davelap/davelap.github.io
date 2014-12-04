@@ -10,4 +10,10 @@
 	"PlantNo": "0101",
 	"Quantity": 20,
 	"QuantityUOM": "KG"
+}, {
+	"PlannedOrderNo": 3,
+	"MaterialNo": "MATERIAL2",
+	"PlantNo": "0101",
+	"Quantity": 20,
+	"QuantityUOM": "KG"
 }]
