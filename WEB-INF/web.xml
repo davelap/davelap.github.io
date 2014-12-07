@@ -82,7 +82,7 @@
 	</servlet-mapping>
 	<context-param>
         <param-name>com.sap.ui5.proxy.REMOTE_LOCATION</param-name>
-        <param-value>http://services.odata.org/</param-value>
+        <param-value>http://services.odata.org/V3/OData/OData.svc</param-value>
     </context-param>
   
 

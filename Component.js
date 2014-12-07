@@ -17,7 +17,7 @@ sap.ui.core.UIComponent.extend("root.Component", {
 			
 			"serviceConfig" : {
 				name: "",
-				serviceUrl: ""
+				serviceUrl: "proxy/http/services.odata.org/V3/OData/OData.svc"
 			}
 		},
 
@@ -57,16 +57,19 @@ sap.ui.core.UIComponent.extend("root.Component", {
 		var oServiceConfig = oMetadataConfig.serviceConfig;
 		var sServiceUrl = oServiceConfig.serviceUrl;
 
+
 		// always use absolute paths relative to our own component
 		// (relative paths will fail if running in the Fiori Launchpad)
 		var rootPath = jQuery.sap.getModulePath("root");
 
 		// if proxy needs to be used for local testing...
 		var sProxyOn = jQuery.sap.getUriParameters().get("proxyOn");
+		//sProxyOn = "true";
 		var bUseProxy = (sProxyOn === "true");
 		if (bUseProxy) {
-			sServiceUrl = rootPath + "/proxy" + sServiceUrl;
+			sServiceUrl = rootPath + "/proxy/" + sServiceUrl;
 		} 
+		//sServiceUrl = epmServiceUrl;
 
 		// start mock server if required
 		var responderOn = jQuery.sap.getUriParameters().get("responderOn");
@@ -96,7 +99,8 @@ sap.ui.core.UIComponent.extend("root.Component", {
 		
 		
 		// set data model
-		var m = new sap.ui.model.odata.ODataModel(sServiceUrl, {json: true,loadMetadataAsync: true});
+		//var m = new sap.ui.model.odata.ODataModel(sServiceUrl, {json: true,loadMetadataAsync: true});
+		var m = new sap.ui.model.odata.ODataModel(sServiceUrl,false);
 		this.setModel(m);
 		
 

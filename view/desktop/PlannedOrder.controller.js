@@ -34,9 +34,9 @@ sap.ui.controller("view.desktop.PlannedOrder", {
 * @memberOf ui5.desktop.SalesOrder
 */
 	onBeforeRendering: function() {
-	    var sURI= "https://services.odata.org/Northwind/Northwind.svc/";
-	    var oModel = new sap.ui.model.odata.ODataModel(sURI, true);
-	    sap.ui.getCore().setModel(oModel);
+	    //var sURI= "https://services.odata.org/Northwind/Northwind.svc/";
+	    //var oModel = new sap.ui.model.odata.ODataModel(sURI, true);
+	    //sap.ui.getCore().setModel(oModel);
         //this.getView().setModel(oModel);
 	    
 	    
