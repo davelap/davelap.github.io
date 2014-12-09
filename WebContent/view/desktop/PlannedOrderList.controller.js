@@ -6,18 +6,18 @@ sap.ui.controller("view.desktop.PlannedOrderList", {
 * @memberOf ui5.desktop.SalesOrder
 */
 	onInit: function() {
-	    var sURI= "proxy/http/services.odata.org/V3/OData/OData.svc/";
-	    var oModel2 = new sap.ui.model.odata.ODataModel(sURI, true);
-	   // var oModel2 = new sap.ui.model.json.JSONModel();
-    //     oModel2.setSizeLimit(15);
-    //     $.getJSON("https://services.odata.org/V3/Northwind/Northwind.svc/Categories?$format=json",  function(result){
-    //               var data = result.value;
-    //               oModel2.setData(data);
-    //               console.log(result.value);
-    //           });
-        var oTable = this.getView().byId("mytable");
-        oTable.setModel(oModel2);
-        oTable.bindRows("/Categories");
+	   // var sURI= "proxy/http/services.odata.org/V3/OData/OData.svc/";
+	   // var oModel2 = new sap.ui.model.odata.ODataModel(sURI, true);
+	   //// var oModel2 = new sap.ui.model.json.JSONModel();
+    // //     oModel2.setSizeLimit(15);
+    // //     $.getJSON("https://services.odata.org/V3/Northwind/Northwind.svc/Categories?$format=json",  function(result){
+    // //               var data = result.value;
+    // //               oModel2.setData(data);
+    // //               console.log(result.value);
+    // //           });
+    //     var oTable = this.getView().byId("mytable");
+    //     oTable.setModel(oModel2);
+    //     oTable.bindRows("/Categories");
 	},
 
 /**

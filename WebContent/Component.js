@@ -16,8 +16,8 @@ sap.ui.core.UIComponent.extend("root.Component", {
 			"titleResource" : "SHELL_TITLE",
 			
 			"serviceConfig" : {
-				name: "",
-				serviceUrl: "proxy/http/services.odata.org/V3/OData/OData.svc"
+				name: "northwind.svc",
+				serviceUrl: "/destinations/northwind/V3/northwind/northwind.svc/"
 			}
 		},
 
