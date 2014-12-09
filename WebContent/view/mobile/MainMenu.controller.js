@@ -59,33 +59,35 @@ sap.ui.controller("mobile.MainMenu", {
 		oApp.to("idPageCarListDesktopCarousel");
 	},
 	
-	OpenMaterialsList: function() {
-		oApp.to("idViewMaterialsList");
+	OpenProducts: function(){
+	    oApp.to("idProducts");
 	},
 	
-	OpenSalesOrder: function() {
-		oApp.to("idViewSalesOrder");
+	OpenProductList: function() {
+		oApp.to("idViewProductList");
 	},
 	
-	OpenSalesOrderList: function() {
-		oApp.to("idViewSalesOrderList");
+	OpenOrder: function() {
+		oApp.to("idViewOrder");
 	},
 	
-	OpenPlannedOrder: function() {
-	    oApp.to("idViewPlannedOrder");
+	OpenOrderList: function() {
+		oApp.to("idViewOrderList");
 	},
 	
-	OpenPlannedOrderList: function () {
-		oApp.to("idViewPlannedOrderList");
+	OpenCustomer: function() {
+	    oApp.to("idViewCustomer");
+	},
+	
+	OpenCustomerList: function () {
+		oApp.to("idViewCustomerList");
 	},
 	
 	OpenODataTest: function(){
 		oApp.to("idoDataTest");
 	},
 	
-	OpenProducts: function(){
-	    oApp.to("idProducts");
-	},
+
 	
 	OpenFindDealer: function() {
 		oApp.to("idPageFindDealer");

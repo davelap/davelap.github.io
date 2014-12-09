@@ -99,8 +99,7 @@ sap.ui.core.UIComponent.extend("root.Component", {
 		
 		
 		// set data model
-		//var m = new sap.ui.model.odata.ODataModel(sServiceUrl, {json: true,loadMetadataAsync: true});
-		var m = new sap.ui.model.odata.ODataModel(sServiceUrl,false);
+		var m = new sap.ui.model.odata.ODataModel(sServiceUrl, {json: true,loadMetadataAsync: true});
 		this.setModel(m);
 		
 

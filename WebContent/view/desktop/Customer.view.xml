@@ -1,4 +1,4 @@
-<sap.ui.core.mvc:View controllerName="view.desktop.PlannedOrder"
+<sap.ui.core.mvc:View controllerName="view.desktop.Customer"
     xmlns="sap.ui.commons"
     xmlns:m="sap.m"
     xmlns:layout="sap.ui.layout.form"

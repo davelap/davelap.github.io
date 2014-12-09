@@ -1,0 +1,9 @@
+<sap.ui.core.mvc:View controllerName="view.desktop.Product"
+    xmlns="sap.ui.commons"
+    xmlns:m="sap.m"
+    xmlns:layout="sap.ui.layout.form"
+    xmlns:table="sap.ui.table"
+    xmlns:sap.ui.core="sap.ui.core" 
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+
+</sap.ui.core.mvc:View>

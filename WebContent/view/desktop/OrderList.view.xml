@@ -1,0 +1,35 @@
+<mvc:View controllerName="view.desktop.OrderList"
+    xmlns="sap.ui.commons"
+    xmlns:table="sap.ui.table"
+    xmlns:sap.ui.core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" >
+
+
+    <table:Table width="100%"  rows="{/Orders}">
+		<table:Column sortProperty="OrderID" filterProperty="OrderID">
+			<Label text="{i18n>OrderID}"/>
+			<table:template >
+				<TextField editable="false" value="{OrderID}"/>
+			</table:template>
+		</table:Column>
+		<table:Column sortProperty="CustomerID" filterProperty="CustomerID">
+			<Label text="{i18n>CustomerID}"/>
+			<table:template>
+				<TextField editable="false" value="{CustomerID}"/>
+			</table:template>
+		</table:Column>
+		<table:Column sortProperty="OrderDate" filterProperty="OrderDate">
+			<Label text="{i18n>OrderDate}"/>
+			<table:template>
+				<TextField editable="false" value="{OrderDate}"/>
+			</table:template>
+		</table:Column>
+		<table:Column sortProperty="RequiredDate" filterProperty="RequiredDate">
+			<Label text="{i18n>RequiredDate}"/>
+			<table:template>
+				<TextField editable="false" value="{RequiredDate}"/>
+			</table:template>
+		</table:Column>	
+
+	</table:Table>
+</mvc:View>

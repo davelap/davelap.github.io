@@ -15,13 +15,14 @@ sap.ui.controller("root.view.App", {
     	var viewoDataProducts           = sap.ui.view({id:"idProducts", viewName:"view.mobile.Products", type:sap.ui.core.mvc.ViewType.XML});
     
     	//Create desktop views
-    	var viewDesktopCarList 			= sap.ui.view({id:"idPageCarDesktopList", viewName:"view.desktop.CarList", type:sap.ui.core.mvc.ViewType.XML});
-    	var viewDesktopCarListCarousel 	= sap.ui.view({id:"idPageCarListDesktopCarousel", viewName:"view.desktop.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
-    	var viewSalesOrder 				= sap.ui.view({id:"idViewSalesOrder", viewName:"view.desktop.SalesOrder", type:sap.ui.core.mvc.ViewType.XML});	
-    	var viewSalesOrderList   		= sap.ui.view({id:"idViewSalesOrderList", viewName:"view.desktop.SalesOrderList", type:sap.ui.core.mvc.ViewType.XML});	
-    	var viewPlannedOrder            = sap.ui.view({id:"idViewPlannedOrder", viewName:"view.desktop.PlannedOrder", type:sap.ui.core.mvc.ViewType.XML});
-        var viewPlannedOrderList        = sap.ui.view({id:"idViewPlannedOrderList", viewName:"view.desktop.PlannedOrderList", type:sap.ui.core.mvc.ViewType.XML});
-     	var viewMaterialsList           = sap.ui.view({id:"idViewMaterialsList", viewName:"view.desktop.MaterialsList", type:sap.ui.core.mvc.ViewType.XML});
+    	//var viewDesktopCarList 			= sap.ui.view({id:"idPageCarDesktopList", viewName:"view.desktop.CarList", type:sap.ui.core.mvc.ViewType.XML});
+    	//var viewDesktopCarListCarousel 	= sap.ui.view({id:"idPageCarListDesktopCarousel", viewName:"view.desktop.CarListCarousel", type:sap.ui.core.mvc.ViewType.XML});
+    	var viewOrder 				    = sap.ui.view({id:"idViewOrder", viewName:"view.desktop.Order", type:sap.ui.core.mvc.ViewType.XML});	
+    	var viewOrderList   		    = sap.ui.view({id:"idViewOrderList", viewName:"view.desktop.OrderList", type:sap.ui.core.mvc.ViewType.XML});	
+    	var viewCustomer                = sap.ui.view({id:"idViewCustomer", viewName:"view.desktop.Customer", type:sap.ui.core.mvc.ViewType.XML});
+        var viewCustomerList            = sap.ui.view({id:"idViewCustomerList", viewName:"view.desktop.CustomerList", type:sap.ui.core.mvc.ViewType.XML});
+     	var viewProductList             = sap.ui.view({id:"idViewProductList", viewName:"view.desktop.ProductList", type:sap.ui.core.mvc.ViewType.XML});
+     	var viewProduct                 = sap.ui.view({id:"idViewProduct", viewName:"view.desktop.Product", type:sap.ui.core.mvc.ViewType.XML});
         
     	//Add Mobile Views
     	oApp.addPage(viewMobileMainMenu);
@@ -32,13 +33,14 @@ sap.ui.controller("root.view.App", {
     	oApp.addPage(viewoDataProducts);
     
     	//Add desktop pages to application
-    	oApp.addPage(viewDesktopCarList);
-    	oApp.addPage(viewDesktopCarListCarousel);
-    	oApp.addPage(viewSalesOrder);
-    	oApp.addPage(viewSalesOrderList);
-    	oApp.addPage(viewPlannedOrder);
-     	oApp.addPage(viewPlannedOrderList);
-     	oApp.addPage(viewMaterialsList);
+    	//oApp.addPage(viewDesktopCarList);
+    	//oApp.addPage(viewDesktopCarListCarousel);
+    	oApp.addPage(viewOrder);
+    	oApp.addPage(viewOrderList);
+    	oApp.addPage(viewCustomer);
+     	oApp.addPage(viewCustomerList);
+     	oApp.addPage(viewProductList);
+     	oApp.addPage(viewProduct);
 	},
 	
     ToMainMenu: function(){

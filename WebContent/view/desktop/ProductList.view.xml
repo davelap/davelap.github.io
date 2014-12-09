@@ -1,0 +1,24 @@
+<mvc:View controllerName="view.desktop.ProductList"
+    xmlns="sap.ui.commons"
+    xmlns:table="sap.ui.table"
+    xmlns:sap.ui.core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" >
+
+
+    <table:Table width="100%"  rows="{/Products}">
+		<table:Column sortProperty="ProductID" filterProperty="ProductID">
+			<Label text="{i18n>ProductID}"/>
+			<table:template >
+				<TextField editable="false" value="{ProductID}"/>
+			</table:template>
+		</table:Column>
+		<table:Column sortProperty="ProductName" filterProperty="ProductName">
+			<Label text="{i18n>ProductName}"/>
+			<table:template>
+				<TextField editable="false" value="{ProductName}"/>
+			</table:template>
+		</table:Column>
+	</table:Table>
+	
+	
+</mvc:View>
