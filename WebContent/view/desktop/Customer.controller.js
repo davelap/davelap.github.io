@@ -13,6 +13,9 @@ sap.ui.controller("view.desktop.Customer", {
         //      });
 
 	}
+	
+
+	
 
 /**
 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.

@@ -19,5 +19,11 @@
 				<TextField editable="false" value="{CompanyName}"/>
 			</table:template>
 		</table:Column>
+		<table:Column>
+			<Label text="{i18n>Edit}"/>
+			<table:template>
+				<Button icon="sap-icon://edit"	press="EditCustomer"/>
+			</table:template>
+		</table:Column>	
 	</table:Table>
 </mvc:View>

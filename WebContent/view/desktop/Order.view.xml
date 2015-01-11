@@ -6,7 +6,7 @@
     xmlns:sap.ui.core="sap.ui.core" 
     xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
 
-    <m:ObjectHeader title="{SoId}" number="{NetAmount}" numberUnit="{CurrencyCode}" >
+    <m:ObjectHeader title="{OrderID}" number="{NetAmount}" numberUnit="{CurrencyCode}" >
     </m:ObjectHeader>
     <TabStrip width="100%">
     	<tabs>
@@ -14,8 +14,16 @@
 	    		<content>
     		        <layout:SimpleForm maxContainerCols="2" editable="true">
                         <layout:content>
-    	    		        <Label text="{i18n>SalesOrderNo}"/>
-                            <TextField value="{SoId}"/>
+    	    		        <Label text="{i18n>OrderID}"/>
+                            <TextField value="{OrderID}"/>
+                            <Label text="{i18n>CustomerID}"/>
+                            <TextField value="{CustomerID}"/>
+                            <Label text="{i18n>OrderDate}"/>
+                            <TextField value="{CustomerID}"/>
+                            <TextField value="{OrderDate}"/>
+                            <Label text="{i18n>RequiredDate}"/>
+                            <TextField  value="{RequiredDate}"/>
+                            <m:DateTimeInput value="RequiredDate"/>
                         </layout:content>
                     </layout:SimpleForm>
 	    		</content>
@@ -39,28 +47,28 @@
     	</tabs>
     </TabStrip>
     
-    <Panel text="Items">
-        <content>
-            <table:Table width="100%"  rows="{LineItems}">
-        		<table:Column >
-        			<Label text="Item No"/>
-        			<table:template>
-        				<TextField editable="false" value="{SoItemPos}"/>
-        			</table:template>
-        		</table:Column>
-        		<table:Column>
-        			<Label text="Product Id"/>
-        			<table:template>
-        				<TextField value="{ProductId}"/>
-        			</table:template>
-        		</table:Column>
-        		<table:Column>
-        			<Label text="Description"/>
-        			<table:template>
-        				<TextField value="{ProductName}"/>
-        			</table:template>
-        		</table:Column>
-        	</table:Table>
-        </content>
-    </Panel>
+    <!--<Panel text="Items">-->
+    <!--    <content>-->
+    <!--        <table:Table width="100%"  rows="{LineItems}">-->
+    <!--    		<table:Column >-->
+    <!--    			<Label text="Item No"/>-->
+    <!--    			<table:template>-->
+    <!--    				<TextField editable="false" value="{SoItemPos}"/>-->
+    <!--    			</table:template>-->
+    <!--    		</table:Column>-->
+    <!--    		<table:Column>-->
+    <!--    			<Label text="Product Id"/>-->
+    <!--    			<table:template>-->
+    <!--    				<TextField value="{ProductId}"/>-->
+    <!--    			</table:template>-->
+    <!--    		</table:Column>-->
+    <!--    		<table:Column>-->
+    <!--    			<Label text="Description"/>-->
+    <!--    			<table:template>-->
+    <!--    				<TextField value="{ProductName}"/>-->
+    <!--    			</table:template>-->
+    <!--    		</table:Column>-->
+    <!--    	</table:Table>-->
+    <!--    </content>-->
+    <!--</Panel>-->
 </sap.ui.core.mvc:View>

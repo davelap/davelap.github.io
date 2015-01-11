@@ -12,8 +12,14 @@
 	    		<content>
     		        <layout:SimpleForm maxContainerCols="2" editable="true">
                         <layout:content>
-    	    		        <Label text="{i18n>CategoryID}"/>
-                            <TextField value="{CategoryID}"/>
+    	    		        <Label text="{i18n>CustomerID}"/>
+                            <TextField value="{CustomerID}"/>
+                            <Label text="{i18n>CompanyName}"/>
+                            <TextField value="{CompanyName}"/>
+                            <Label text="{i18n>ContactName}"/>
+                            <TextField value="{ContactName}"/>
+                            <Label text="{i18n>ContactTitle}"/>
+                            <TextField value="{ContactTitle}"/>
                         </layout:content>
                     </layout:SimpleForm>
 	    		</content>

@@ -1,5 +1,6 @@
 <mvc:View controllerName="view.desktop.ProductList"
     xmlns="sap.ui.commons"
+    xmlns:m="sap.m"
     xmlns:table="sap.ui.table"
     xmlns:sap.ui.core="sap.ui.core" 
     xmlns:mvc="sap.ui.core.mvc" >
@@ -18,7 +19,59 @@
 				<TextField editable="false" value="{ProductName}"/>
 			</table:template>
 		</table:Column>
+		<table:Column sortProperty="SupplierID" filterProperty="SupplierID">
+			<Label text="{i18n>SupplierID}"/>
+			<table:template>
+				<TextField editable="false" value="{SupplierID}"/>
+			</table:template>
+		</table:Column>
+		<table:Column sortProperty="CategoryID" filterProperty="CategoryID">
+			<Label text="{i18n>CategoryID}"/>
+			<table:template>
+		       <DropdownBox editable="true"
+		                    selectedKey="{CategoryID}" 
+		                    enabled="true"
+		                    searchHelpEnabled="true"
+		                    items="{ path: '/Categories', sorter: { path: 'CategoryName' } }">
+		       		<sap.ui.core:ListItem key="{CategoryID}" text="{CategoryName}" />
+		       </DropdownBox>
+			</table:template>
+		</table:Column>
+		<table:Column sortProperty="QuantityPerUnit" filterProperty="QuantityPerUnit">
+			<Label text="{i18n>QuantityPerUnit}"/>
+			<table:template>
+				<TextField editable="false" value="{QuantityPerUnit}"/>
+			</table:template>
+		</table:Column>
+		<table:Column sortProperty="UnitPrice" filterProperty="UnitPrice">
+			<Label text="{i18n>UnitPrice}"/>
+			<table:template>
+				<TextField editable="false" value="{UnitPrice}"/>
+			</table:template>
+		</table:Column>
+		<table:Column sortProperty="UnitsInStock" filterProperty="UnitsInStock">
+			<Label text="{i18n>UnitsInStock}"/>
+			<table:template>
+				<TextField editable="false" value="{UnitsInStock}"/>
+			</table:template>
+		</table:Column>
+		<table:Column sortProperty="UnitsOnOrder" filterProperty="UnitsOnOrder">
+			<Label text="{i18n>UnitsOnOrder}"/>
+			<table:template>
+				<TextField editable="false" value="{UnitsOnOrder}"/>
+			</table:template>
+		</table:Column>
+		<table:Column sortProperty="ReorderLevel" filterProperty="ReorderLevel">
+			<Label text="{i18n>ReorderLevel}"/>
+			<table:template>
+				<TextField editable="false" value="{ReorderLevel}"/>
+			</table:template>
+		</table:Column>
+		<table:Column sortProperty="Discontinued" filterProperty="Discontinued">
+			<Label text="{i18n>Discontinued}"/>
+			<table:template>
+			    <CheckBox xmlns="sap.ui.commons" checked="{Discontinued}" enabled="true" editable="false"/>
+			</table:template>
+		</table:Column>
 	</table:Table>
-	
-	
 </mvc:View>

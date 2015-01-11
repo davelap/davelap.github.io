@@ -5,6 +5,19 @@ sap.ui.controller("view.desktop.OrderList", {
 	},
 	onBeforeRendering: function() {
 
+	},
+	
+	EditOrder: function(evt) {
+	   var context = evt.getSource().getBindingContext();
+	   var idViewOrder = "idViewOrder";
+	   
+        oGlobalApp.to(idViewOrder);
+        
+        //If context is set, set order view context
+        if (context){
+            var page = oGlobalApp.getPage(idViewOrder);
+            page.setBindingContext(context);
+        }
 	}
 
 /**

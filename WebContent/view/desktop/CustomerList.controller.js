@@ -6,6 +6,19 @@ sap.ui.controller("view.desktop.CustomerList", {
 
 	onBeforeRendering: function() {
 	    
+	},
+	
+    EditCustomer: function(evt){
+	   var context = evt.getSource().getBindingContext();
+	   var idViewCustomer = "idViewCustomer";
+	   
+        oGlobalApp.to(idViewCustomer);
+        
+        //If context is set, set order view context
+        if (context){
+            var page = oGlobalApp.getPage(idViewCustomer);
+            page.setBindingContext(context);
+        }
 	}
 
 /**
